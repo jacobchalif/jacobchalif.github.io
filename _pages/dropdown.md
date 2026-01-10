@@ -1,13 +1,11 @@
 ---
 layout: page
-title: submenus
+title: More
 nav: true
-nav_order: 8
+nav_order: 9
 dropdown: true
 children:
-  - title: bookshelf
-    permalink: /books/
-  - title: divider
-  - title: blog
-    permalink: /blog/
+  - title: CV
+    permalink: /assets/pdf/Chalif_CV.pdf
+    external: true
 ---

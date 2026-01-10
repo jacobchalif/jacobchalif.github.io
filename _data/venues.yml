@@ -1,9 +1,8 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"Denali":
+  color: "#d93904"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"Antarctica":
+  color: "#0bccde"
 
-"Vision":
-  color: "#009f36"
+"Jet stream":
+  color: "#21b521"
