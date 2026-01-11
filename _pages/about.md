@@ -30,8 +30,8 @@ latest_posts:
 <br>
 I am an atmospheric scientist studying Earth's past and present climate, with an interest in wildfires, atmospheric chemistry, aerosol–climate interactions, and weather extremes. I have been based out of the <a href="https://icecore.host.dartmouth.edu/">Dartmouth Ice, Climate, and Environment Laboratory</a> since 2021.
 
-Most of my research makes use of ice core paloeclimate records, where I use the geochemistry of snow and ice to reconstruct past atmospheric composition and climate variability.
+Much of my research draws on ice core paleoclimate records. By analyzing the geochemistry of snow and ice, I reconstruct past atmospheric composition and climate variability across timescales ranging from seasons to millennia.
 
-Depending on the day, I'm thinking about centuries-old Siberian fires that left traces in Alaskan glaciers, millions of years of ice that came to a standstill in a windy corner of Antarctica, subtle variations in the high-altitude jet stream that affect weather we experience on the ground, or microscopic plankton that wield a quiet command over the planet’s climate—and across all these topics, the human fingerprint on the environment and climate is unmistakable.
+On any given day, I might be thinking about centuries-old Siberian fires that left traces in Alaskan glaciers, millions of years of ice that came to a standstill in a windy corner of Antarctica, subtle shifts in the high-altitude jet stream that shape the weather we experience on the ground, or microscopic plankton that wield a quiet command over the planet’s climate. Across these topics, the recent human fingerprint on our planet is unmistakable, and I seek to understand how our actions reverberate through the Earth system.
 
 <br>
