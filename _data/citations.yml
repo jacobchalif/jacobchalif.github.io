@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-04'
+  last_updated: '2026-06-01'
 papers:
   z3tFqOAAAAAJ:2osOgNQ5qMEC:
     citations: 0
@@ -13,6 +13,10 @@ papers:
     citations: 0
     title: 'Climatological and Topographical Drivers of Wildfire Growth in Alaska: A Remote Sensing Analysis of 14 Wildfire Events (2001-2019)'
     year: '2023'
+  z3tFqOAAAAAJ:LkGwnXOMwfcC:
+    citations: 0
+    title: Elemental concentration and Pb isotope ratio data for the Begguya Summit Plateau ice cores, Begguya (Mt. Hunter), Alaska from 800 to 2022 CE.
+    year: '2025'
   z3tFqOAAAAAJ:Tyk-4Ss8FVUC:
     citations: 0
     title: Wildfire Activity in the Denali Ice Core
@@ -33,6 +37,10 @@ papers:
     citations: 3
     title: Measurement of snowpack density, grain size, and black carbon concentration using time-domain diffuse optics
     year: '2025'
+  z3tFqOAAAAAJ:_FxGoFyzp5QC:
+    citations: 0
+    title: Fidelity and stratigraphy of the Antarctic Allan Hills old ice archive from Continuous Flow Analysis
+    year: '2026'
   z3tFqOAAAAAJ:d1gkVwhDpl0C:
     citations: 0
     title: Evaluation of public policy and Covid-19 pandemic impacts on historic Asian pollution emissions using Alaskan ice core lead data
@@ -45,6 +53,10 @@ papers:
     citations: 0
     title: Ice core wildfire data from the Begguya (Mt Hunter) plateau, Denali National Park, Alaska, 2013
     year: '2024'
+  z3tFqOAAAAAJ:roLk4NBRz8UC:
+    citations: 0
+    title: 'Extending the Antarctic dust record: Geochemical and physical constraints from 4000-500 ka ice at the Allan Hills Blue Ice Area'
+    year: '2026'
   z3tFqOAAAAAJ:u-x6o8ySG0sC:
     citations: 0
     title: 'Dimethyl sulfide oxidation over the industrial era: comparison of long-term observations and several chemical mechanisms'
@@ -53,6 +65,10 @@ papers:
     citations: 0
     title: Effects and Implications of Enhanced Jet Stream Waviness over North America during the 1950s-1970s
     year: '2021'
+  z3tFqOAAAAAJ:ufrVoPGSRksC:
+    citations: 0
+    title: 'ICECReW: Connecting and Training Icy Early Career Researchers with an Annual Workshop'
+    year: '2024'
   z3tFqOAAAAAJ:zYLM7Y9cAGgC:
     citations: 0
     title: Model-ice core comparison of changes to DMS oxidation chemistry over the industrial era
