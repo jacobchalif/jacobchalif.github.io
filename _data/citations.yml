@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-12'
+  last_updated: '2026-07-03'
 papers:
   z3tFqOAAAAAJ:2osOgNQ5qMEC:
     citations: 0
@@ -17,6 +17,10 @@ papers:
     citations: 0
     title: Elemental concentration and Pb isotope ratio data for the Begguya Summit Plateau ice cores, Begguya (Mt. Hunter), Alaska from 800 to 2022 CE.
     year: '2025'
+  z3tFqOAAAAAJ:Se3iqnhoufwC:
+    citations: 0
+    title: 'Dust Record from Allan Hills Blue Ice: Towards Extending the Archive to 4000 ka'
+    year: '2026'
   z3tFqOAAAAAJ:Tyk-4Ss8FVUC:
     citations: 0
     title: Wildfire Activity in the Denali Ice Core
@@ -25,6 +29,10 @@ papers:
     citations: 0
     title: Modern Decline in North Pacific Ocean Primary Production is Unprecedented for the Past Millennium in the Denali Ice Core
     year: '2022'
+  z3tFqOAAAAAJ:UebtZRa9Y70C:
+    citations: 1
+    title: GPS stake measurements of surface ice flow at the Allan Hills, Antarctica (2023-2025)
+    year: '2026'
   z3tFqOAAAAAJ:WF5omc3nYNoC:
     citations: 6
     title: "A wavier polar jet stream contributed to the mid\u201020th century winter warming hole in the United States"
