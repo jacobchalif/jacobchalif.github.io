@@ -36,10 +36,10 @@ export function SiteFooter() {
     <div className="wrap footer-grid">
       <div><p className="eyebrow light"><span />Get in touch</p><a className="footer-email" href="mailto:jchalif@uw.edu">jchalif@uw.edu</a></div>
       <div className="footer-links">
-        <a href="https://scholar.google.com/citations?user=z3tFqOAAAAAJ">Google Scholar ↗</a>
-        <a href="https://sites.uw.edu/beckya/">Alexander Group ↗</a>
-        <a href="https://alexjturner.github.io/">Turner Group ↗</a>
-        <a href="https://icecore.host.dartmouth.edu/">Dartmouth Ice Core Lab ↗</a>
+        <a href="https://scholar.google.com/citations?user=z3tFqOAAAAAJ">Google Scholar ↗︎</a>
+        <a href="https://sites.uw.edu/beckya/">Alexander Group ↗︎</a>
+        <a href="https://alexjturner.github.io/">Turner Group ↗︎</a>
+        <a href="https://icecore.host.dartmouth.edu/">Dartmouth Ice Core Lab ↗︎</a>
       </div>
       <div className="footer-note">PhD student<br />Atmospheric &amp; Climate Sciences<br />University of Washington</div>
     </div>

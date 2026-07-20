@@ -72,7 +72,7 @@ export default function Publications() {
     <section className="page-hero compact publications-hero wrap"><h1>Publications</h1></section>
     <section className="publication-list wrap">{pubs.map((p) => <article className="publication" key={p.title}>
       <div><span>{p.year}</span>{p.status && <small>{p.status}</small>}</div>
-      {p.doi ? <a className="doi-link" href={p.doi} aria-label={`Open DOI for ${p.title}`}>↗</a> : <span className="doi-spacer" />}
+      {p.doi ? <a className="doi-link" href={p.doi} aria-label={`Open DOI for ${p.title}`}>↗︎</a> : <span className="doi-spacer" />}
       <div>{p.doi ? <h2><a href={p.doi}>{p.title}</a></h2> : <h2>{p.title}</h2>}<p><AuthorList authors={p.authors} /></p><em>{p.journal}{p.highlightHref && <> · <a className="publication-highlight" href={p.highlightHref}>Editor’s Highlight</a></>}</em></div>
     </article>)}</section>
     <SiteFooter />

@@ -366,6 +366,18 @@ img[src*="extreme-heat-reuters"]{object-position:center center}
   .footer-quote cite{font-size:11px}
   .footer-bottom{margin-top:18px}
 }
+
+/* Stable monochrome portrait and text-style link arrows */
+.portrait-panel img,.portrait-panel:hover img{filter:grayscale(1);transition:none;will-change:auto}
+.index-arrow,.news-link-arrow,.doi-link,.text-link span,.footer-links a{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-variant-emoji:text}
+
+/* The mobile hero separates identity from the closing statement. */
+.hero-role-mobile{display:none}
+@media(max-width:900px){
+  .hero-role-desktop{display:none}
+  .hero-role-mobile{display:block;max-width:330px;margin:18px auto 0;color:white;font-size:10px;line-height:1.55;letter-spacing:.08em;text-shadow:0 1px 14px rgba(0,0,0,.75)}
+  .hero-statement{padding-top:12px}
+}
 .research-program-feature img.research-program-video-fallback,.project-cover img.research-program-video-fallback{display:none}
 @media(prefers-reduced-motion:reduce){
   .research-program-feature .research-program-video,.project-cover .research-program-video{display:none}

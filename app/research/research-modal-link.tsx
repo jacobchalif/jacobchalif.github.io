@@ -80,7 +80,7 @@ export function ResearchModalLink({ slug, id, className, children }: { slug: str
         {project.relatedPublications && <section className="research-citations">
           <p className="eyebrow"><span />Related publications</p>
           <div className="research-citation-grid">{project.relatedPublications.map((publication) => {
-            const citation = <><div><strong>{publication.authors} ({publication.year})</strong>{publication.href && <span>↗</span>}</div><h3>{publication.title}</h3><p>{publication.journal}</p></>;
+            const citation = <><div><strong>{publication.authors} ({publication.year})</strong>{publication.href && <span>↗︎</span>}</div><h3>{publication.title}</h3><p>{publication.journal}</p></>;
             return publication.href
               ? <a href={publication.href} target="_blank" rel="noreferrer" key={publication.href}>{citation}</a>
               : <article key={publication.title}>{citation}</article>;

@@ -100,7 +100,7 @@ export default function News() {
       {news.map((item) => {
         return <a className="news-row" href={item.href} key={item.href}>
           <div className="news-year">{item.date}</div>
-          <span className="news-link-arrow" aria-hidden="true">↗</span>
+          <span className="news-link-arrow" aria-hidden="true">↗︎</span>
           <div className="news-entry">
             <h2>{item.title}</h2>
             <p>{item.source}</p>
