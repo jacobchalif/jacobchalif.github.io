@@ -1,0 +1,5 @@
+@media (max-width: 900px) {
+  .page-hero.compact h1 {
+    font-size: clamp(44px, 13.5vw, 55px);
+  }
+}
