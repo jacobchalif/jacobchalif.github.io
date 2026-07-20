@@ -394,3 +394,12 @@ img[src*="extreme-heat-reuters"]{object-position:center center}
   .research-program-feature .research-program-video,.project-cover .research-program-video{display:none}
   .research-program-feature img.research-program-video-fallback,.project-cover img.research-program-video-fallback{display:block}
 }
+
+/* Mobile CV: render every page in the document flow because mobile browsers
+   commonly expose only the first page of an embedded PDF. */
+.cv-mobile-pages{display:none}
+@media(max-width:900px){
+  .pdf-frame{display:none}
+  .cv-mobile-pages{display:grid;gap:14px;margin-bottom:76px}
+  .cv-mobile-pages img{width:100%;height:auto;background:white;border:1px solid var(--rule);box-shadow:0 8px 24px rgba(25,27,25,.08)}
+}
