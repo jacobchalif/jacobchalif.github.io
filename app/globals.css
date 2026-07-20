@@ -378,6 +378,13 @@ img[src*="extreme-heat-reuters"]{object-position:center center}
   .hero-role-mobile{display:block;max-width:330px;margin:18px auto 0;color:white;font-size:10px;line-height:1.55;letter-spacing:.08em;text-shadow:0 1px 14px rgba(0,0,0,.75)}
   .hero-statement{padding-top:12px}
 }
+
+/* Consistent, contained interior pages on mobile. */
+@media(max-width:900px){
+  .page-hero h1,.research-hero h1,.fieldwork-hero h1,.cv-heading h1{font-size:55px}
+  .pdf-frame.wrap{width:calc(100% - 36px);max-width:calc(100vw - 36px);height:70vh;min-height:560px;overflow:hidden}
+  .pdf-frame iframe{display:block;width:100%;max-width:100%;min-width:0}
+}
 .research-program-feature img.research-program-video-fallback,.project-cover img.research-program-video-fallback{display:none}
 @media(prefers-reduced-motion:reduce){
   .research-program-feature .research-program-video,.project-cover .research-program-video{display:none}
