@@ -67,11 +67,12 @@ main{padding-top:76px}
   .site-header:not(.inverse){background:transparent;border-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
   .site-header.is-scrolled .header-name,.site-header.menu-open .header-name{opacity:1;transform:none;pointer-events:auto}
   .site-header:not(.inverse) .header-name{opacity:1;transform:none;pointer-events:auto}
-  .mobile-menu-toggle{grid-column:3;grid-row:1;justify-self:end;align-self:center;display:flex;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(25,27,25,.62);flex-direction:column;align-items:center;justify-content:center;gap:4px;color:white;cursor:pointer;pointer-events:auto;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+  .mobile-menu-toggle{position:relative;grid-column:3;grid-row:1;justify-self:end;align-self:center;display:flex;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(25,27,25,.62);flex-direction:column;align-items:center;justify-content:center;gap:4px;color:white;cursor:pointer;pointer-events:auto;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
   .mobile-menu-toggle span{display:block;width:17px;height:1.5px;background:currentColor;transition:transform .3s ease,opacity .2s ease}
-  .site-header.menu-open .mobile-menu-toggle span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
-  .site-header.menu-open .mobile-menu-toggle span:nth-child(2){opacity:0}
-  .site-header.menu-open .mobile-menu-toggle span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+  .site-header.menu-open .mobile-menu-toggle span{opacity:0}
+  .site-header.menu-open .mobile-menu-toggle:before,.site-header.menu-open .mobile-menu-toggle:after{content:"";position:absolute;left:50%;top:50%;width:18px;height:1.5px;background:currentColor;transform-origin:center}
+  .site-header.menu-open .mobile-menu-toggle:before{transform:translate(-50%,-50%) rotate(45deg)}
+  .site-header.menu-open .mobile-menu-toggle:after{transform:translate(-50%,-50%) rotate(-45deg)}
   .site-header nav{position:absolute;top:64px;left:18px;right:18px;width:auto;margin:0;padding:8px 22px 14px;display:flex;flex-direction:column;gap:0;overflow:visible;white-space:normal;background:rgba(25,27,25,.94);color:white;border:1px solid rgba(255,255,255,.18);box-shadow:0 20px 50px rgba(0,0,0,.28);opacity:0;visibility:hidden;transform:translateY(-10px);pointer-events:none;transition:opacity .25s ease,transform .35s cubic-bezier(.2,.75,.25,1),visibility .25s}
   .site-header.menu-open nav{opacity:1;visibility:visible;transform:none;pointer-events:auto}
   .site-header nav a{width:100%;padding:15px 2px;border-bottom:1px solid rgba(255,255,255,.16);font-size:15px}
@@ -250,7 +251,10 @@ img[src*="eclipse-denali-feature-5125"]{object-position:56% center}
 .research-methods-feature figcaption{position:absolute;right:16px;bottom:18px;margin:0;color:white;writing-mode:vertical-rl;text-transform:uppercase;letter-spacing:.14em;font-size:9px;text-shadow:0 1px 10px rgba(0,0,0,.65)}
 .research-modal-backdrop{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:32px;background:rgba(16,18,17,.68);backdrop-filter:blur(9px);animation:modal-fade .28s ease both}
 .research-modal{position:relative;width:min(1120px,100%);max-height:calc(100vh - 64px);overflow-y:auto;background:var(--snow);box-shadow:0 30px 90px rgba(0,0,0,.38);animation:modal-rise .42s cubic-bezier(.2,.75,.25,1) both}
-.research-modal-close{position:sticky;top:18px;z-index:2;display:block;width:44px;height:44px;margin:0 20px -44px auto;transform:translateY(18px);border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(25,27,25,.45);color:white;font:300 30px/1 Helvetica,Arial,sans-serif;cursor:pointer;backdrop-filter:blur(7px)}
+.research-modal-close{position:sticky;top:18px;z-index:2;display:block;width:44px;height:44px;margin:0 20px -44px auto;transform:translateY(18px);border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(25,27,25,.45);color:transparent;font-size:0;cursor:pointer;backdrop-filter:blur(7px)}
+.research-modal-close:before,.research-modal-close:after{content:"";position:absolute;left:50%;top:50%;width:18px;height:1.5px;background:white;transform-origin:center}
+.research-modal-close:before{transform:translate(-50%,-50%) rotate(45deg)}
+.research-modal-close:after{transform:translate(-50%,-50%) rotate(-45deg)}
 .research-modal-close:hover{background:var(--orange);border-color:var(--orange)}
 .research-modal-header{display:grid;grid-template-columns:43% 57%;background:var(--deep);color:white}
 .research-modal-header>div{padding:58px 54px}
