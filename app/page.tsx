@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <main>
       <section className="home-hero">
+        <img className="home-hero-image" src="/images/eclipse-hero.webp" alt="" width="2560" height="1920" fetchPriority="high" decoding="async" />
         <SiteHeader inverse />
         <div className="hero-location">Eclipse Icefield · Yukon, Canada</div>
         <div className="hero-grid wrap">
@@ -29,7 +30,7 @@ export default function Home() {
 
       <section className="home-intro">
         <div className="portrait-panel">
-          <img src="/images/jacob-lab.jpg" alt="Jacob Chalif beside an ice-core melter in the laboratory" />
+          <img src="/images/jacob-lab.webp" alt="Jacob Chalif beside an ice-core melter in the laboratory" width="800" height="1200" loading="lazy" decoding="async" />
         </div>
         <div className="premise-panel">
           <h2>How can past changes in atmospheric composition inform modern climate change?</h2>
