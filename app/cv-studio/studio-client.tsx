@@ -98,13 +98,12 @@ export default function StudioClient() {
   }
   function dragOver(targetId: string, after: boolean) {
     if (!draggedId) return; const movingIds = selectedIds.includes(draggedId) ? selectedIds : [draggedId];
-    if (movingIds.includes(targetId)) { setDropTarget(null); return; }
-    setDropTarget(current => current?.id === targetId && current.after === after ? current : { id: targetId, after });
+    setDropTarget(movingIds.includes(targetId) ? null : { id: targetId, after });
   }
   function drop(targetId: string, after: boolean) {
     if (!data || !draggedId) return; const list = data[section] as Entry[]; const movingIds = selectedIds.includes(draggedId) ? selectedIds : [draggedId];
     if (movingIds.includes(targetId)) { setDraggedId(null); setDropTarget(null); return; }
-    const moved = list.filter(item => movingIds.includes(item.id!)), remaining = list.filter(item => !movingIds.includes(item.id!)); const target = remaining.findIndex(item => item.id === targetId); if (target < 0) { setDraggedId(null); setDropTarget(null); return; }
+    const moved = list.filter(item => movingIds.includes(item.id!)), remaining = list.filter(item => !movingIds.includes(item.id!)); const target = remaining.findIndex(item => item.id === targetId); if (target < 0) return;
     remaining.splice(target + (after ? 1 : 0), 0, ...moved); data[section] = remaining; setEntryId(draggedId); setSelectedIds(moved.map(item => item.id!)); setDraggedId(null); setDropTarget(null); setData({ ...data }); setStatus("Unsaved");
   }
   async function publish() {
