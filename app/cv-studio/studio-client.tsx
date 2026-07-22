@@ -35,6 +35,7 @@ function summary(section: string, item: Entry) {
 }
 
 export default function StudioClient() {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [data, setData] = useState<StudioData | null>(null);
   const [section, setSection] = useState("profile");
   const [entryId, setEntryId] = useState("profile");
@@ -45,6 +46,10 @@ export default function StudioClient() {
   const items = useMemo(() => !data ? [] : config.single ? [data.profile as Entry] : (data[section] as Entry[] || []), [data, section, config.single]);
   const current = items.find(item => (item.id || "profile") === entryId) || items[0];
 
+  useEffect(() => {
+    const saved = window.localStorage.getItem("cv-studio-theme");
+    setTheme(saved === "light" || saved === "dark" ? saved : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  }, []);
   useEffect(() => { fetch("/api/cv-studio").then(async response => {
     const payload = await response.json(); if (response.status === 403) { window.location.assign("/signin-with-chatgpt?return_to=%2Fcv-studio"); return; } if (!response.ok) throw new Error(payload.error);
     setData({ ...payload.cv, publications: payload.publications }); setEmail(payload.email); setStatus("Saved");
@@ -62,7 +67,7 @@ export default function StudioClient() {
     if (!data || config.single) return;
     const item: Entry = { id: `${section}-${Date.now()}` };
     for (const [key,,type] of config.fields) item[key] = type === "lines" ? [] : type === "checkbox" ? true : type === "status" ? "published" : "";
-    (data[section] as Entry[]).unshift(item); setEntryId(item.id!); setData({ ...data }); setStatus("Unsaved");
+    (data[section] as Entry[]).push(item); setEntryId(item.id!); setData({ ...data }); setStatus("Unsaved");
   }
   function remove() {
     if (!data || !current || config.single || !confirm("Delete this entry?")) return;
@@ -82,12 +87,16 @@ export default function StudioClient() {
     const payload = await response.json(); if (!response.ok) { setStatus("Failed"); alert(payload.error); return; }
     setStatus("Published"); alert("Saved. GitHub is rebuilding the website and PDF.");
   }
+  function toggleTheme() {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next); window.localStorage.setItem("cv-studio-theme", next);
+  }
 
-  return <main className="online-studio">
-    <header><h1>CV Studio</h1><span>{email}</span><span className="studio-status">{status}</span><a href="/signout-with-chatgpt?return_to=%2F">Sign out</a><button onClick={publish} disabled={!data}>Save & publish</button></header>
+  return <main className="online-studio" data-theme={theme}>
+    <header><h1>CV Studio</h1><span>{email}</span><span className="studio-status">{status}</span><button className="studio-theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}>{theme === "dark" ? "☀ Light" : "☾ Dark"}</button><a href="/signout-with-chatgpt?return_to=%2F">Sign out</a><button onClick={publish} disabled={!data}>Save & publish</button></header>
     <div className="studio-shell"><nav>{Object.entries(configs).map(([key, value]) => <button className={key === section ? "active" : ""} onClick={() => switchSection(key)} key={key}>{value.title}<small>{value.single ? "" : text((data?.[key] as Entry[])?.length)}</small></button>)}</nav>
-      <section className="studio-workspace"><div className="studio-heading"><div><h2>{config.title}</h2><p>Drag entries to reorder them. Changes publish only when you press Save &amp; publish.</p></div>{!config.single && <button onClick={addEntry}>+ Add entry</button>}</div>
-        <div className="studio-grid"><div className="studio-list">{items.map(item => <button key={item.id || "profile"} draggable={!config.single} onDragStart={() => setDraggedId(item.id!)} onDragOver={event => event.preventDefault()} onDrop={event => drop(item.id!, event.clientY > event.currentTarget.getBoundingClientRect().top + event.currentTarget.offsetHeight / 2)} onClick={() => setEntryId(item.id || "profile")} className={(item.id || "profile") === (current?.id || "profile") ? "active" : ""}><strong>{summary(section, item)}</strong><small>{text(item.date || item.role || item.status || item.details || item.text || item.email)}</small></button>)}</div>
+      <section className="studio-workspace"><div className="studio-heading"><div><h2>{config.title}</h2><p>Drag entries to reorder them. Changes publish only when you press Save &amp; publish.</p></div></div>
+        <div className="studio-grid"><div className="studio-list">{items.map(item => <button key={item.id || "profile"} draggable={!config.single} onDragStart={() => setDraggedId(item.id!)} onDragOver={event => event.preventDefault()} onDrop={event => drop(item.id!, event.clientY > event.currentTarget.getBoundingClientRect().top + event.currentTarget.offsetHeight / 2)} onClick={() => setEntryId(item.id || "profile")} className={(item.id || "profile") === (current?.id || "profile") ? "active" : ""}><strong>{summary(section, item)}</strong><small>{text(item.date || item.role || item.status || item.details || item.text || item.email)}</small></button>)}{!config.single && <button className="studio-add-entry" onClick={addEntry}><strong>＋ Add entry</strong><small>Creates a new item at the end of this list</small></button>}</div>
           <div className="studio-editor">{current && <>{config.fields.map(([key,label,type]) => <label key={key}>{label}{type === "long" || type === "lines" ? <textarea value={type === "lines" ? (current[key] as string[] || []).join("\n") : text(current[key])} onChange={event => change(key, type === "lines" ? event.target.value.split("\n").filter(Boolean) : event.target.value)} /> : type === "checkbox" ? <input type="checkbox" checked={Boolean(current[key])} onChange={event => change(key, event.target.checked)} /> : type === "status" ? <select value={text(current[key])} onChange={event => change(key,event.target.value)}><option value="published">Published</option><option value="in_review">In review</option><option value="in_preparation">In preparation</option></select> : type === "presentation" ? <select value={text(current[key])} onChange={event => change(key,event.target.value)}><option value="">Not specified</option><option>Talk</option><option>Poster</option></select> : <input value={text(current[key])} onChange={event => change(key,event.target.value)} />}</label>)}{!config.single && <div className="studio-actions"><button onClick={() => move(-1)}>Move earlier</button><button onClick={() => move(1)}>Move later</button><button className="danger" onClick={remove}>Delete</button></div>}</>}</div>
         </div></section></div>
   </main>;
