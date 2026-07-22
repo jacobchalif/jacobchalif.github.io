@@ -42,7 +42,6 @@ export default function StudioClient() {
   const [status, setStatus] = useState("Loading…");
   const [email, setEmail] = useState("");
   const [draggedId, setDraggedId] = useState<string | null>(null);
-  const [dropTarget, setDropTarget] = useState<{ id: string; after: boolean } | null>(null);
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [selectionAnchorId, setSelectionAnchorId] = useState<string | null>(null);
   const config = configs[section];
@@ -93,18 +92,14 @@ export default function StudioClient() {
     setEntryId(id);
   }
   function startDrag(id: string) {
-    setDraggedId(id); setDropTarget(null);
+    setDraggedId(id);
     if (!selectedIds.includes(id)) { setSelectedIds([id]); setSelectionAnchorId(id); setEntryId(id); }
-  }
-  function dragOver(targetId: string, after: boolean) {
-    if (!draggedId) return; const movingIds = selectedIds.includes(draggedId) ? selectedIds : [draggedId];
-    setDropTarget(movingIds.includes(targetId) ? null : { id: targetId, after });
   }
   function drop(targetId: string, after: boolean) {
     if (!data || !draggedId) return; const list = data[section] as Entry[]; const movingIds = selectedIds.includes(draggedId) ? selectedIds : [draggedId];
-    if (movingIds.includes(targetId)) { setDraggedId(null); setDropTarget(null); return; }
+    if (movingIds.includes(targetId)) { setDraggedId(null); return; }
     const moved = list.filter(item => movingIds.includes(item.id!)), remaining = list.filter(item => !movingIds.includes(item.id!)); const target = remaining.findIndex(item => item.id === targetId); if (target < 0) return;
-    remaining.splice(target + (after ? 1 : 0), 0, ...moved); data[section] = remaining; setEntryId(draggedId); setSelectedIds(moved.map(item => item.id!)); setDraggedId(null); setDropTarget(null); setData({ ...data }); setStatus("Unsaved");
+    remaining.splice(target + (after ? 1 : 0), 0, ...moved); data[section] = remaining; setEntryId(draggedId); setSelectedIds(moved.map(item => item.id!)); setDraggedId(null); setData({ ...data }); setStatus("Unsaved");
   }
   async function publish() {
     if (!data) return; setStatus("Publishing…"); const { publications, ...cv } = data;
@@ -121,7 +116,7 @@ export default function StudioClient() {
     <header><h1>CV Studio</h1><span>{email}</span><span className="studio-status">{status}</span><button className="studio-theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}>{theme === "dark" ? "☀ Light" : "☾ Dark"}</button><a href="/signout-with-chatgpt?return_to=%2F">Sign out</a><button onClick={publish} disabled={!data}>Save & publish</button></header>
     <div className="studio-shell"><nav>{Object.entries(configs).map(([key, value]) => <button className={key === section ? "active" : ""} onClick={() => switchSection(key)} key={key}>{value.title}<small>{value.single ? "" : text((data?.[key] as Entry[])?.length)}</small></button>)}</nav>
       <section className="studio-workspace"><div className="studio-heading"><div><h2>{config.title}</h2><p>Drag to reorder. Hold Command/Ctrl to select individual entries or Shift to select a range.</p></div></div>
-        <div className="studio-grid"><div className="studio-list">{items.map(item => <button key={item.id || "profile"} draggable={!config.single} onDragStart={() => startDrag(item.id!)} onDragEnd={() => { setDraggedId(null); setDropTarget(null); }} onDragOver={event => { event.preventDefault(); dragOver(item.id!, event.clientY > event.currentTarget.getBoundingClientRect().top + event.currentTarget.offsetHeight / 2); }} onDrop={event => drop(item.id!, event.clientY > event.currentTarget.getBoundingClientRect().top + event.currentTarget.offsetHeight / 2)} onClick={event => selectItem(item.id || "profile", event)} className={`${(item.id || "profile") === (current?.id || "profile") ? "active" : ""} ${selectedIds.includes(item.id!) ? "selected" : ""} ${draggedId && (selectedIds.includes(item.id!) || draggedId === item.id) ? "dragging" : ""} ${dropTarget?.id === item.id ? (dropTarget.after ? "drop-after" : "drop-before") : ""}`}><strong>{summary(section, item)}</strong><small>{text(item.date || item.role || item.status || item.details || item.text || item.email)}</small></button>)}{!config.single && <button className="studio-add-entry" onClick={addEntry}><strong>＋ Add entry</strong><small>Creates a new item at the end of this list</small></button>}</div>
+        <div className="studio-grid"><div className="studio-list">{items.map(item => <button key={item.id || "profile"} draggable={!config.single} onDragStart={() => startDrag(item.id!)} onDragEnd={() => setDraggedId(null)} onDragOver={event => event.preventDefault()} onDrop={event => drop(item.id!, event.clientY > event.currentTarget.getBoundingClientRect().top + event.currentTarget.offsetHeight / 2)} onClick={event => selectItem(item.id || "profile", event)} className={`${(item.id || "profile") === (current?.id || "profile") ? "active" : ""} ${selectedIds.includes(item.id!) ? "selected" : ""}`}><strong>{summary(section, item)}</strong><small>{text(item.date || item.role || item.status || item.details || item.text || item.email)}</small></button>)}{!config.single && <button className="studio-add-entry" onClick={addEntry}><strong>＋ Add entry</strong><small>Creates a new item at the end of this list</small></button>}</div>
           <div className="studio-editor">{current && <>{config.fields.map(([key,label,type]) => <label key={key}>{label}{type === "long" || type === "lines" ? <textarea value={type === "lines" ? (current[key] as string[] || []).join("\n") : text(current[key])} onChange={event => change(key, type === "lines" ? event.target.value.split("\n").filter(Boolean) : event.target.value)} /> : type === "checkbox" ? <input type="checkbox" checked={Boolean(current[key])} onChange={event => change(key, event.target.checked)} /> : type === "status" ? <select value={text(current[key])} onChange={event => change(key,event.target.value)}><option value="published">Published</option><option value="in_review">In review</option><option value="in_preparation">In preparation</option></select> : type === "presentation" ? <select value={text(current[key])} onChange={event => change(key,event.target.value)}><option value="">Not specified</option><option>Talk</option><option>Poster</option></select> : <input value={text(current[key])} onChange={event => change(key,event.target.value)} />}</label>)}{!config.single && <div className="studio-actions"><button onClick={() => move(-1)}>Move earlier</button><button onClick={() => move(1)}>Move later</button><button className="danger" onClick={remove}>Delete</button></div>}</>}</div>
         </div></section></div>
   </main>;
