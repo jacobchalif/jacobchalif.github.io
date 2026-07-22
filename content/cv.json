@@ -1,0 +1,704 @@
+{
+  "version": 2,
+  "profile": {
+    "name": "Jacob Chalif",
+    "email": "jchalif@uw.edu",
+    "website": "https://jacobchalif.github.io"
+  },
+  "education": [
+    {
+      "id": "resumeSubheading-1",
+      "organization": "University of Washington",
+      "location": "Seattle, WA",
+      "role": "Ph.D. in Atmospheric and Climate Sciences",
+      "date": "Beginning Fall 2026",
+      "bullets": [
+        "Advisors: Becky Alexander and Alex Turner"
+      ]
+    },
+    {
+      "id": "resumeSubheading-2",
+      "organization": "Dartmouth College",
+      "location": "Hanover, NH",
+      "role": "M. S. in Earth Sciences",
+      "date": "2024–2026 (expected)",
+      "bullets": [
+        "Advisor: Erich Osterberg",
+        "Thesis: Seasonal climate drivers of southeastern Siberian fire over the last 1,200 years from the Begguya (Alaska) ice core"
+      ]
+    },
+    {
+      "id": "resumeSubheading-3",
+      "organization": "Dartmouth College",
+      "location": "Hanover, NH",
+      "role": "B. A. in Environmental Earth Sciences",
+      "date": "2017–2021",
+      "bullets": [
+        "Senior thesis: Effect of mid-20th-century jet stream waviness on the U. S. “warming hole”"
+      ]
+    }
+  ],
+  "researchExperience": [
+    {
+      "id": "resumeSubheading-1",
+      "organization": "Dartmouth Ice, Climate, and Environment (ICE) Lab",
+      "location": "Hanover, NH",
+      "role": "Lab Manager and Research Assistant",
+      "date": "2021–Present",
+      "bullets": [
+        "Operate and maintain continuous-flow analysis (CFA) ice-core melter systems and analyze ice-core impurity geochemistry (dust, sea salts, sulfur species (MSA, SO4), heavy metals, fire tracers, and water isotopes)",
+        "Led projects measuring fire aerosols in the Denali ice core, reinterpreting Arctic MSA variability using atmospheric chemistry box modeling, and characterizing impurities in million-year-old ice from the Allan Hills, Antarctica"
+      ]
+    }
+  ],
+  "funding": [
+    {
+      "id": "funding-1",
+      "label": "2026",
+      "text": "Fieldwork support from the Dartmouth Changing Polar Regions cluster, Guarini School, Graduate Student Council, and Earth Sciences Department to drill ice cores at the Eclipse Icefield. Total grants: $11,300."
+    },
+    {
+      "id": "funding-2",
+      "label": "2025",
+      "text": "Subgrant from COLDEX. High-resolution CFA chemistry analysis of Allan Hills ice cores. Erich Osterberg (PI), Jacob Chalif (co-PI). Total grant: $35,000."
+    },
+    {
+      "id": "funding-3",
+      "label": "2024",
+      "text": "COLDEX ECR Grant. Detailed layer analysis of oldest ice, Phase II. Jacob Chalif (PI). Total grant: $5,000."
+    },
+    {
+      "id": "funding-4",
+      "label": "2024",
+      "text": "COLDEX ECR Grant. Sulfur history of the MIS 6/5e deglaciation. Jacob Chalif (PI), Ursula Jongebloed (co-PI). Total grant: $7,000."
+    },
+    {
+      "id": "funding-5",
+      "label": "2023",
+      "text": "COLDEX ECR Grant. Detailed layer analysis of oldest ice. Liam Kirkpatrick (PI), Jacob Chalif (co-PI). Total grant: $5,000."
+    }
+  ],
+  "fieldwork": [
+    {
+      "id": "resumeProject-1",
+      "location": "Eclipse Icefield, St. Elias Mountains (Yukon), Canada",
+      "date": "May–June 2026",
+      "bullets": [
+        "Conceived the project and secured $11,300 in funding to develop a high-resolution ice-core record of North Pacific aerosol transport",
+        "Led the recovery of four shallow firn cores (up to 20 m deep) and snowpit samples for multiproxy analysis of dust, wildfire soot, industrial pollution, marine aerosols, and PFAS",
+        "Collaborated with a University of Maine geophysics team using radar and ice-flow measurements to provide context for interpreting the ice-core records"
+      ]
+    },
+    {
+      "id": "resumeProject-2",
+      "location": "Allan Hills, Antarctica",
+      "date": "Nov 2024–Jan 2025",
+      "bullets": [
+        "Recovered more than 10,000 lb of ice from multiple sites using three drilling systems as part of the NSF Center for Oldest Ice Exploration (COLDEX)",
+        "Helped recover the oldest directly dated ice yet discovered—approximately 6.7 million years old—to investigate atmospheric composition and climate over millions of years",
+        "Conducted ApRES, ground-penetrating radar, and GPS surveys to map the ice sheet’s internal structure and motion and guide the search for older ice"
+      ]
+    }
+  ],
+  "service": [
+    {
+      "id": "service-1",
+      "label": "Peer reviewer",
+      "text": "AGU Advances, Geophysical Research Letters, Environmental Research Letters, Climate of the Past, Journal of Geophysical Research: Atmospheres"
+    },
+    {
+      "id": "service-2",
+      "label": "Ice Core Early Career Researcher Workshop (ICECReW) organizer",
+      "text": "2024 and 2025 (lead organizer in 2025)"
+    }
+  ],
+  "awards": [
+    {
+      "id": "award-1",
+      "label": "Atmospheric and Climate Sciences Scholarship Award",
+      "text": "University of Washington, 2026"
+    },
+    {
+      "id": "award-2",
+      "label": "Atmospheric and Climate Sciences Top Scholar Award",
+      "text": "University of Washington, 2026–2027"
+    },
+    {
+      "id": "award-3",
+      "label": "Program on Climate Change Graduate Fellow",
+      "text": "University of Washington, 2026–2027"
+    },
+    {
+      "id": "award-4",
+      "label": "EARS faculty award for outstanding publication by a graduate student",
+      "text": "Dartmouth, 2026"
+    },
+    {
+      "id": "award-5",
+      "label": "NSF GRFP Honorable Mention",
+      "text": "2025"
+    },
+    {
+      "id": "award-6",
+      "label": "Magna Cum Laude",
+      "text": "Dartmouth, 2021"
+    },
+    {
+      "id": "award-7",
+      "label": "High honors in Earth Sciences",
+      "text": "Dartmouth, 2021"
+    },
+    {
+      "id": "award-8",
+      "label": "Warren F. Upham 1871 Geology Award for Outstanding Senior Thesis",
+      "text": "Dartmouth, 2021"
+    },
+    {
+      "id": "award-9",
+      "label": "Three citations for academic excellence",
+      "text": "Dartmouth undergraduate coursework: (1) Introduction to Programming and Computation, (2) Climate Dynamics, and (3) Geomorphology"
+    }
+  ],
+  "outreach": [
+    {
+      "id": "outreach-1",
+      "label": "Climate of Hope / Project 2100",
+      "text": "Delivered one of two keynote addresses, alongside Richard Alley, at the February 2026 Chicago Project 2100 conference for high school students; also planned activities for teachers at the related Climate of Hope event"
+    },
+    {
+      "id": "outreach-2",
+      "label": "Middle schools",
+      "text": "Spoke with middle-school students in New York (remotely) and Vermont (in person) about Antarctic fieldwork and ice cores in April 2025, including demonstrations with Antarctic ice samples"
+    },
+    {
+      "id": "outreach-3",
+      "label": "School of Ice",
+      "text": "Designed and taught a lesson on ice-core CFA techniques and chemistry analysis for educators at minority-serving institutions in June 2023 and June 2025, featuring the melting of a Greenland ice core and real-time interpretation of the results"
+    },
+    {
+      "id": "outreach-4",
+      "label": "Great Issues Scholars",
+      "text": "Led sessions for Dartmouth’s Great Issues Scholars program in 2023, 2024, and 2025 on how ice-core science informs 21st-century climate change"
+    },
+    {
+      "id": "outreach-5",
+      "label": "Media outreach",
+      "text": "[Climate.us](https://www.climate.us/news-features/understanding-climate/despite-big-storms-us-winters-are-still-warming), [Sustain What with Andy Revkin](https://revkin.substack.com/p/extreme-winter-weather-in-a-human), [Grist](https://grist.org/climate/yes-climate-change-can-supercharge-a-winter-storm-heres-how/), [Boston Globe](https://www.bostonglobe.com/2026/01/03/science/new-england-cold-climate-change), [Eos](https://eos.org/editor-highlights/the-mid-20th-century-winter-cooling-in-the-eastern-u-s-explained), [New Scientist](https://www.newscientist.com/article/2485835-extreme-winter-weather-isnt-down-to-a-wavier-jet-stream/), [Süddeutsche Zeitung (German)](https://www.sueddeutsche.de/projekte/artikel/wissen/klimawandel-jetstream-auswirkungen-extremwetter-e904764/?reduced=true), [Newsday](https://www.newsday.com/long-island/environment/antarctica-ice-climate-change-huntington-man-ipn0sgmd), [NHPR](https://www.nhpr.org/nh-news/2024-12-29/a-dartmouth-grad-student-is-in-antarctica-this-winter-on-a-mission-to-find-the-worlds-oldest-ice) (also [Valley News](https://www.vnews.com/A-Dartmouth-grad-student-is-in-Antarctica-this-winter-on-a-mission-to-find-the-world-s-oldest-ice-58689922) and [Concord Monitor](https://www.concordmonitor.com/A-Dartmouth-grad-student-is-in-Antarctica-this-winter-on-a-mission-to-find-the-world-s-oldest-ice-58728766)), [VT Digger](https://vtdigger.org/2025/01/19/winter-in-florida-this-vermonter-has-reason-to-travel-farther-south-to-antarctica/), WCAX ([one](https://www.wcax.com/2024/12/05/dartmouth-grad-student-antarctica-collect-planets-oldest-ice-cores/) and [two](https://www.wcax.com/2024/12/09/life-camp-antarctica/)), [WHDH](https://whdh.com/news/dartmouth-grad-student-among-team-analyzing-ancient-ice-at-the-south-pole/), [Newsweek](https://www.newsweek.com/ice-core-analysis-uncovers-human-impact-arctic-atmosphere-1959702), [Vermont Standard](https://thevermontstandard.com/woodstocks-jacob-chalif-will-join-an-elite-group-of-scientists-to-study-ice-cores-in-antarctica/), [Earth.com](https://www.earth.com/news/air-pollution-alters-the-atmosphere-in-the-remote-arctic/), and Dartmouth News ([one](https://home.dartmouth.edu/news/2024/09/ice-cores-show-pollutions-impact-arctic-atmosphere) and [two](https://home.dartmouth.edu/news/2025/06/study-winter-jet-stream-was-erratic-climate-change))"
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-1",
+      "label": "Programming and Geospatial Tools",
+      "text": "Python, MATLAB, Julia, R, C, ArcGIS/QGIS, HTML web design"
+    },
+    {
+      "id": "skill-2",
+      "label": "Research Skills",
+      "text": "Large-volume climate data management (reanalyses, global climate/chemistry model output), geochemical analysis (SP2, particle counters), ice core melter systems, microprocessors, DC circuit design and solar power"
+    },
+    {
+      "id": "skill-3",
+      "label": "Medical Training",
+      "text": "WFR (exp. 07/2028), CPR (exp. 07/2027)"
+    }
+  ],
+  "engagement": [
+    {
+      "id": "engagement-1",
+      "label": "Sustainable Woodstock",
+      "text": "volunteer and trustee (treasurer), 2023–2026"
+    },
+    {
+      "id": "engagement-2",
+      "label": "Upper Valley Adaptation Workgroup",
+      "text": "member, 2023–2025"
+    }
+  ],
+  "mentoring": [
+    {
+      "id": "mentoring-1",
+      "name": "Kat Adelman",
+      "details": "Dartmouth ’21, lab assistant (2 terms)"
+    },
+    {
+      "id": "mentoring-2",
+      "name": "Victoria Hofner",
+      "details": "Dartmouth ’22, lab assistant (2 terms)"
+    },
+    {
+      "id": "mentoring-3",
+      "name": "Liam Kirkpatrick",
+      "details": "Dartmouth ’22, research and lab assistant (3 terms)"
+    },
+    {
+      "id": "mentoring-4",
+      "name": "Abigail Lambert",
+      "details": "Dartmouth ’22, lab assistant (2 terms)"
+    },
+    {
+      "id": "mentoring-5",
+      "name": "Eric Youth",
+      "details": "Dartmouth ’22, lab assistant (2 terms), also advised senior honors thesis"
+    },
+    {
+      "id": "mentoring-6",
+      "name": "Parker Jones",
+      "details": "Dartmouth ’24, lab assistant (1 term)"
+    },
+    {
+      "id": "mentoring-7",
+      "name": "Chloe Nicolao",
+      "details": "Dartmouth ’24, lab assistant (1 term)"
+    },
+    {
+      "id": "mentoring-8",
+      "name": "Cady Rancourt",
+      "details": "Dartmouth ’24, Sophomore Science Scholar, studying “weather whiplash”"
+    },
+    {
+      "id": "mentoring-9",
+      "name": "John DeForest",
+      "details": "Dartmouth ’25, lab assistant (1 term)"
+    },
+    {
+      "id": "mentoring-10",
+      "name": "Maggie Druckenmiller",
+      "details": "Dartmouth ’25, lab assistant (1 term) and UGAR-funded project (1 term)"
+    },
+    {
+      "id": "mentoring-11",
+      "name": "Erica Simon",
+      "details": "Dartmouth ’25, lab assistant (1 term)"
+    },
+    {
+      "id": "mentoring-12",
+      "name": "Laura Wilson",
+      "details": "Dartmouth ’25, lab assistant (2 terms)"
+    },
+    {
+      "id": "mentoring-13",
+      "name": "Albert Zhang",
+      "details": "Dartmouth ’25, lab assistant (1 term)"
+    },
+    {
+      "id": "mentoring-14",
+      "name": "Cooper Camp",
+      "details": "Dartmouth ’26, lab assistant (1 term)"
+    },
+    {
+      "id": "mentoring-15",
+      "name": "Keller Bailey",
+      "details": "Dartmouth ’27, lab assistant (1 term)"
+    },
+    {
+      "id": "mentoring-16",
+      "name": "Blaine Boxwell",
+      "details": "Dartmouth ’27, lab assistant (2 terms)"
+    },
+    {
+      "id": "mentoring-17",
+      "name": "Aleaokalani Kahele",
+      "details": "Dartmouth ’27, lab assistant (2 terms)"
+    },
+    {
+      "id": "mentoring-18",
+      "name": "Margaret Raffo",
+      "details": "Dartmouth ’28, research and lab assistant, studying radionuclides (2 terms)"
+    },
+    {
+      "id": "mentoring-1784678855109",
+      "name": "Talia Hoffner",
+      "details": "Dartmouth ’28, lab assistant (1 terms)"
+    }
+  ],
+  "conferenceAbstracts": [
+    {
+      "id": "conferenceAbstracts-1784678897602",
+      "year": "2026",
+      "authors": "Normandin, J., Ryu, Y., Chalif, J. I., Higgins, J. A., Sigman, D.",
+      "title": "Constraining Photolytic Parameters Using Nitrate Isotopes in Allan Hills Firn",
+      "conference": "COLDEX Annual Meeting",
+      "location": "Austin, TX",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-1",
+      "year": "2026",
+      "authors": "Chalif, J. I., Osterberg, E. C., Winski, D. A., Kehrwald, N. M., Lonergan, M., Kaplan, J. O., Jongebloed, U. A., Guiterman, C. H., Edwards, R., Leung, M. T., Schachterle, M. L., Jasmann, J. R., Dibb, J. E., Scheuer, E., Kirkpatrick, L. R., Ferris, D. G., Handley, M. J., Hantson, S., Koffman, B. G., Kreutz, K. J., Saltzman, E. S., Wake, C. P.",
+      "title": "A Siberian paleofire proxy from the Begguya (Denali) ice core",
+      "conference": "International Partnerships in Ice Core Science 2026 Conference",
+      "location": "Banff, Canada",
+      "presentationType": ""
+    },
+    {
+      "id": "abstract-2",
+      "year": "2026",
+      "authors": "Kirkpatrick, L., Chalif, J., Brandis, D., Carter, A., Choi, A., Davidge, L., Handley, M., Hishamunda, V., Jongebloed, U., Kalk, M., Korotkikh, E., Lowes-Bicay, H., Marks-Peterson, J., Schauer, A., Stoll, N., Tipton, L., Brook, E., Aarons, S., Buizert, C., Cole-Dai, J., Higgins, J., Koffman, B., Osterberg, E., Steig, E., Shackleton, S., Fudge, T.",
+      "title": "3D ECM and multiproxy constraints on layering and paleoclimate preservation in ancient Allan Hills ice",
+      "conference": "International Partnerships in Ice Core Science 2026 Conference",
+      "location": "Banff, Canada",
+      "presentationType": ""
+    },
+    {
+      "id": "abstract-3",
+      "year": "2026",
+      "authors": "Carter, A., Choi, A., Koornkeef, J., Marks-Peterson, J., Shackleton, S., Higgins, J., Brook, E., Kirkpatrick, L., Chalif, J., Aarons, S.",
+      "title": "Extending the Antarctic dust record: Geochemical and physical constraints from 4000–500 ka ice at the Allan Hills Blue Ice Area",
+      "conference": "International Partnerships in Ice Core Science 2026 Conference",
+      "location": "Banff, Canada",
+      "presentationType": ""
+    },
+    {
+      "id": "abstract-4",
+      "year": "2026",
+      "authors": "Koffman, B., Winski, D., Chalif, J., Lightman, S., Johnson, M., Lemoine, A., Mullen, K., Osterberg, E., Kreutz, K., Wake, C.",
+      "title": "Begguya ice core dust reveals rapid Younger Dryas deglaciation across southern Alaska",
+      "conference": "International Partnerships in Ice Core Science 2026 Conference",
+      "location": "Banff, Canada",
+      "presentationType": ""
+    },
+    {
+      "id": "abstract-5",
+      "year": "2026",
+      "authors": "Winski, D., Kreutz, K., Koffman, B., Osterberg, E., Skelton, E., Brooks, H., Gavin, M., Keirstead, C., McCullough, S., Introne, D., Handley, M., Chalif, J., Williams, O., Buizert, C., Kirkpatrick, L., Jenk, T., Fang, L., Kurbatov, A., Wake, C., Lemoine, A., Mullen, K.",
+      "title": "Younger Dryas climate interval recorded in water isotopes and trace metals in the Begguya ice cores",
+      "conference": "International Partnerships in Ice Core Science 2026 Conference",
+      "location": "Banff, Canada",
+      "presentationType": ""
+    },
+    {
+      "id": "abstract-6",
+      "year": "2026",
+      "authors": "Carter, A., Choi, A., Koornkeef, J., Marks-Peterson, J., Shackleton, S., Higgins, J., Brook, E., Kirkpatrick, L., Chalif, J., Aarons, S.",
+      "title": "Extending the Antarctic dust record: Geochemical and physical constraints from 4000–500 ka ice at the Allan Hills Blue Ice Area",
+      "conference": "Goldschmidt 2026 Conference Session 13h",
+      "location": "Montreal, Canada",
+      "presentationType": ""
+    },
+    {
+      "id": "abstract-7",
+      "year": "2026",
+      "authors": "Hudak, A., et al. (including Chalif, J.)",
+      "title": "Fidelity and stratigraphy of the Antarctic Allan Hills old ice archive from Continuous Flow Analysis",
+      "conference": "EGU General Assembly 2026 Session CL1.2.7",
+      "location": "Vienna, Austria",
+      "presentationType": ""
+    },
+    {
+      "id": "abstract-8",
+      "year": "2025",
+      "authors": "Brooks, H., Handley, M., Kreutz, K., Chalif, J., Osterberg, E., Jongebloed, U., Winski, D., Kirkpatrick, L., Koffman, B., Wake, C., Schwikowski, M., Skelton, E., Ferris, D.",
+      "title": "Increasing Complexity of Asian Pb Emissions Throughout Industrialization (800 to 2022 CE) as Revealed in the Denali Ice Core Records, Begguya, Alaska",
+      "conference": "AGU 2025 Fall Meeting",
+      "location": "New Orleans, LA",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-9",
+      "year": "2025",
+      "authors": "Chalif, J., Osterberg, E., Winski, D., Kehrwald, N., Lonergan, M., Guiterman, C., Kaplan, J., Jongebloed, U., Youth, E., Edwards, R., Leung, M., Schachterle, M., Jasmann, J., Dibb, J., Scheuer, E., Macken, A., Hantson, S., Kirkpatrick, L., Ferris, D., Handley, M., Kreutz, K., Saltzman, E., Wake, C.",
+      "title": "Atmospheric chemistry implications from Denali ice core fire measurements",
+      "conference": "ICECAP Workshop",
+      "location": "Seattle, WA",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-10",
+      "year": "2025",
+      "authors": "Jongebloed, U., Chalif, J., Tashmim, L., Porter, W., Bates, K., Chen, Q., Osterberg, E., Koffman, B., Winski, D., Kreutz, K., Ferris, D., Wake, C., Alexander, B.",
+      "title": "Dimethyl sulfide oxidation over the industrial era: comparison of long-term observations and several chemical mechanisms",
+      "conference": "ICECAP Workshop",
+      "location": "Seattle, WA",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-11",
+      "year": "2025",
+      "authors": "Koffman, B., Chalif, J., et al.",
+      "title": "Local versus long-distance dust provenance in a 2019 shallow core at Mount Hunter, Alaska",
+      "conference": "4th Annual US Ice Core Community Meeting",
+      "location": "Minneapolis, MN",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-12",
+      "year": "2025",
+      "authors": "Kirkpatrick, L., Chalif, J. I., et al.",
+      "title": "Updates on coordinated ECM and multiproxy sampling in Allan Hills ice",
+      "conference": "4th Annual US Ice Core Community Meeting",
+      "location": "Minneapolis, MN",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-13",
+      "year": "2025",
+      "authors": "Chalif, J., Osterberg, E., Winski, D., Kehrwald, N., Lonergan, M., Guiterman, C., Kaplan, J., Jongebloed, U., Youth, E., Edwards, R., Leung, M., Schachterle, M., Jasmann, J., Dibb, J., Scheuer, E., Macken, A., Hantson, S., Kirkpatrick, L., Ferris, D., Handley, M., Kreutz, K., Saltzman, E., Wake, C.",
+      "title": "A Siberian fire proxy from the Denali ice core",
+      "conference": "4th Annual US Ice Core Community Meeting",
+      "location": "Minneapolis, MN",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-14",
+      "year": "2024",
+      "authors": "Koffman, B., Jongebloed, U., Chalif, J., Andreasen, J., Fudge, T. J.",
+      "title": "ICECReW: Connecting and Training Icy Early Career Researchers with an Annual Workshop",
+      "conference": "AGU 2024 Fall Meeting",
+      "location": "Washington, DC",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-15",
+      "year": "2024",
+      "authors": "Choi, A., Peterson, J., Kalk, M., Kirkpatrick, L., Fudge, T. J., Chalif, J., Tipton, L., Davidge, L., Sliwinski, M., Osterberg, E., Koffman, B., Steig, E., Higgins, J., Shackleton, S., Brook, E.",
+      "title": "A High Resolution Look at Carbon Dioxide and Methane Variations in ALHIC1901",
+      "conference": "AGU 2024 Fall Meeting",
+      "location": "Washington, DC",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-16",
+      "year": "2024",
+      "authors": "Jongebloed, U., Chalif, J., Tashmim, L., Porter, W., Bates, K., Chen, Q., Osterberg, E., Koffman, B., Winski, D., Kreutz, K., Ferris, D., Wake, C., Alexander, B.",
+      "title": "Dimethyl sulfide oxidation over the industrial era: comparison of long-term observations and several chemical mechanisms",
+      "conference": "AGU 2024 Fall Meeting",
+      "location": "Washington, DC",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-17",
+      "year": "2024",
+      "authors": "Brooks, H., Handley, M., Kreutz, K., Chalif, J., Osterberg, E., Jongebloed, U., Winski, D., Kirkpatrick, L., Koffman, B., Wake, C., Schwikowski, M., Skelton, E., Ferris, D.",
+      "title": "Novel lead (Pb) record tracing the impact of human policy and culture on Asian pollution emissions in the North Pacific atmosphere over the last 1,600 years",
+      "conference": "AGU 2024 Fall Meeting",
+      "location": "Washington, DC",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-18",
+      "year": "2024",
+      "authors": "Osterberg, E. C., Chalif, J. I., Winski, D., Kehrwald, N., Lonergan, M., Youth, E., Kreutz, K., Wake, C., Ferris, D., Edwards, R., Dibb, J., Saltzman, E., Hantson, S.",
+      "title": "North Pacific Wildfire Activity over the past Millennium from a Suite of Alpine Ice Cores",
+      "conference": "AGU 2024 Fall Meeting",
+      "location": "Washington, DC",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-19",
+      "year": "2024",
+      "authors": "Jongebloed, U. A., Chalif, J. I., Tashmim, L., Porter, W. C., Bates, K. H., Chen, Q., Osterberg, E. C., Koffman, B. G., Cole-Dai, J., Winski, D. A., Ferris, D. G., Kreutz, K. J., Wake, C. P., Alexander, B.",
+      "title": "Comparison of four DMS oxidation mechanisms with long-term observations of DMS oxidation products indicates missing DMS chemistry",
+      "conference": "GEOS-Chem Meeting",
+      "location": "Chicago, IL",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-20",
+      "year": "2024",
+      "authors": "Chalif, J. I., Osterberg, E. C., Kreutz, K., Winski, D., Wake, C., Ferris, D., Koffman, B., Kirkpatrick, L., Handley, M., Introne, D.",
+      "title": "Integrity of North Pacific Ice Core Climate Archives in a Warming World",
+      "conference": "3rd Annual US Ice Core Open Science Meeting",
+      "location": "Portland, ME",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-21",
+      "year": "2024",
+      "authors": "Brooks, H., Handley, M., Kreutz, K., Winski, D., Chalif, J., Osterberg, E. C.",
+      "title": "Echoes from the Arctic: Unravelling Asia’s Past Through Pb Fluctuations in Alaskan Ice Cores",
+      "conference": "3rd Annual US Ice Core Open Science Meeting",
+      "location": "Portland, ME",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-22",
+      "year": "2024",
+      "authors": "Jongebloed, U. A., Chalif, J. I., Tashmim, L., Porter, W. C., Bates, K. H., Chen, Q., Osterberg, E. C., Koffman, B. G., Cole-Dai, J., Winski, D. A., Ferris, D. G., Kreutz, K. J., Wake, C. P., Alexander, B.",
+      "title": "Comparison of four DMS oxidation mechanisms with long-term observations of DMS oxidation products indicates missing DMS chemistry",
+      "conference": "3rd Annual US Ice Core Open Science Meeting",
+      "location": "Portland, ME",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-23",
+      "year": "2024",
+      "authors": "Kirkpatrick, L., Chalif, J. I., et al.",
+      "title": "Coordinated ECM, Water Isotope, Chemistry, and Dust Measurements Provide New Insights into Allan Hills Layering",
+      "conference": "3rd Annual US Ice Core Open Science Meeting",
+      "location": "Portland, ME",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-24",
+      "year": "2024",
+      "authors": "Winski, D., Chalif, J. I., et al.",
+      "title": "A North Pacific ice core record of summer climate and wildfire history during the last 1000 years",
+      "conference": "3rd Annual US Ice Core Open Science Meeting",
+      "location": "Portland, ME",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-25",
+      "year": "2024",
+      "authors": "Tipton, L., Osterberg, E. C., Koffman, B., Benello, M., Chalif, J., Anderson, K., Chesler, A., Ferris, D., Kreutz, K., Cole-Dai, J.",
+      "title": "Causes of the Late Holocene Dust Spike in Antarctic Ice Cores",
+      "conference": "3rd Annual US Ice Core Open Science Meeting",
+      "location": "Portland, ME",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-26",
+      "year": "2024",
+      "authors": "Chalif, J. I., Jongebloed, U., Osterberg, E. C., Koffman, B., Alexander, B., Winski, D., Polashenski, D., Stamieszkin, K., Ferris, D., Kreutz, K., Wake, C., Cole-Dai, J.",
+      "title": "Pollution drives enigmatic decline in subarctic biogenic sulfur",
+      "conference": "52nd International Arctic Workshop",
+      "location": "Amherst, MA",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-27",
+      "year": "2024",
+      "authors": "Brooks, H., Handley, M., Kreutz, K., Winski, D., Chalif, J., Osterberg, E. C.",
+      "title": "Novel lead (Pb) isotope record tracking the impact of policy and the COVID-19 pandemic on Asian pollution emissions deposited in Alaskan ice cores",
+      "conference": "52nd International Arctic Workshop",
+      "location": "Amherst, MA",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-28",
+      "year": "2023",
+      "authors": "Kirkpatrick, L., Fudge, T. J., Chalif, J., Tipton, L.",
+      "title": "Stratigraphy in highly thinned ice cores",
+      "conference": "AGU 2023 Fall Meeting",
+      "location": "",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-29",
+      "year": "2023",
+      "authors": "Jongebloed, U., Chalif, J., Tashmim, L., Porter, W. C., Alexander, B.",
+      "title": "Comparison of ice core vs. modeled changes in DMS oxidation chemistry over the Industrial Era",
+      "conference": "AGU 2023 Fall Meeting",
+      "location": "",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-30",
+      "year": "2023",
+      "authors": "Macken, A., Osterberg, E. C., Winski, D., Chalif, J., and others",
+      "title": "Climatological and Topographical Drivers of Wildfire Growth in Alaska: A Remote Sensing Analysis of 14 Wildfire Events (2001–2019)",
+      "conference": "AGU 2023 Fall Meeting",
+      "location": "",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-31",
+      "year": "2023",
+      "authors": "Brooks, H., Handley, M., Kreutz, K., Winski, D., Chalif, J., Osterberg, E. C., Kindstedt, I., Erwin, E., Braddock, S., Kirkpatrick, L. R., Wake, C., Kurbatov, A., Gerbi, C.",
+      "title": "Evaluation of public policy and COVID-19 pandemic impacts on historic Asian pollution emissions using Alaskan ice core lead data",
+      "conference": "AGU 2023 Fall Meeting",
+      "location": "",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-32",
+      "year": "2023",
+      "authors": "Tipton, L., Osterberg, E. C., Koffman, B., Kurbatov, A., Chalif, J., Adelman, K., Anderson, K., Chesler, A., Ferris, D., Kreutz, K., Cole-Dai, J.",
+      "title": "Causes of the Late Holocene Dust Spike in Antarctic Ice Cores",
+      "conference": "AGU 2023 Fall Meeting",
+      "location": "",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-33",
+      "year": "2023",
+      "authors": "Chalif, J., Jongebloed, U., Osterberg, E. C., Koffman, B., Alexander, B., Polashenski, D., Winski, D., Kreutz, K., Wake, C., Stamieszkin, K., Ferris, D.",
+      "title": "Anthropogenic NOx emissions, not declining marine primary production, drive reduced modern MSA levels in the Denali ice core",
+      "conference": "2nd Annual US Ice Core Open Science Meeting",
+      "location": "Seattle, WA",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-34",
+      "year": "2023",
+      "authors": "Jongebloed, U., Chalif, J., Larrick, C., Cole-Dai, J., Salimi, S., Edouard, S., Geng, L., Osterberg, E. C., Alexander, B.",
+      "title": "Industrial-Era decline in Arctic methanesulfonic acid is offset by increased biogenic sulfate aerosol",
+      "conference": "2nd US Ice Core Open Science Meeting",
+      "location": "Seattle, WA",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-35",
+      "year": "2023",
+      "authors": "Tipton, L., Osterberg, E. C., Koffman, B., Kurbatov, A., Chalif, J., Adelman, K., Anderson, K., Chesler, A., Ferris, D., Kreutz, K., Cole-Dai, J.",
+      "title": "What caused the Late Holocene Dust Increase in Antarctic Ice Cores?",
+      "conference": "2nd US Ice Core Open Science Meeting",
+      "location": "Seattle, WA",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-36",
+      "year": "2022",
+      "authors": "Osterberg, E. C., Chalif, J., Koffman, B., Polashenski, D., Winski, D., Kreutz, K., Wake, C., Stamieszkin, K., Ferris, D.",
+      "title": "Modern Decline in North Pacific Ocean Primary Production is Unprecedented for the Past Millennium in the Denali Ice Core",
+      "conference": "AGU 2022 Fall Meeting",
+      "location": "",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-37",
+      "year": "2022",
+      "authors": "Youth, E., Osterberg, E. C., Lonergan, M., Chalif, J., Winski, D., Kreutz, K., Wake, C., Ferris, D., Saltzman, E.",
+      "title": "1000 Years of Wildfire Activity in the North Pacific from Three Ice Cores",
+      "conference": "AGU 2022 Fall Meeting",
+      "location": "",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-38",
+      "year": "2022",
+      "authors": "Brooks, H., Handley, M., Kreutz, K., Winski, D., Chalif, J., Osterberg, E. C., Kindstedt, I., Erwin, E., Braddock, S., Kirkpatrick, L. R., Wake, C., Kurbatov, A., Gerbi, C.",
+      "title": "Evaluating Asian Policy- and Pandemic-Related Emissions Impacts Using Ice Core Pb Concentration and Isotope Ratio Data from Mt. Hunter (Begguya) ~800–2022 CE",
+      "conference": "AGU 2022 Fall Meeting",
+      "location": "",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-39",
+      "year": "2022",
+      "authors": "Chalif, J., Osterberg, E. C., Winski, D., Kreutz, K., Edwards, R., Wake, C., Dibb, J., Scheuer, E., Saltzman, E., Hantson, S., Kehrwald, N., Lonergan, M.",
+      "title": "A North Pacific Paleofire Proxy from the Denali Ice Core",
+      "conference": "3rd Open Science Meeting of the International Partnerships in Ice Core Sciences",
+      "location": "Crans-Montana, Switzerland",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-40",
+      "year": "2022",
+      "authors": "Lonergan, M., Osterberg, E. C., Winski, D., Kreutz, K., Wake, C., Chalif, J., Ferris, D.",
+      "title": "Wildfire Activity in the Denali Ice Core Catchment",
+      "conference": "1st US Ice Core Open Science Meeting",
+      "location": "La Jolla, CA",
+      "presentationType": "Talk"
+    },
+    {
+      "id": "abstract-41",
+      "year": "2022",
+      "authors": "Chalif, J., Osterberg, E. C., Winski, D., Kreutz, K., Edwards, R., Wake, C., Dibb, J., Scheuer, E., Saltzman, E., Hantson, S., Kehrwald, N., Lonergan, M.",
+      "title": "Updates on a North Pacific Paleofire Proxy from the Denali Ice Core",
+      "conference": "1st US Ice Core Open Science Meeting",
+      "location": "La Jolla, CA",
+      "presentationType": "Poster"
+    },
+    {
+      "id": "abstract-42",
+      "year": "2021",
+      "authors": "Chalif, J., Osterberg, E. C., Partridge, T.",
+      "title": "Effects and implications of enhanced jet stream waviness over North America during the 1950s–1970s",
+      "conference": "AGU 2021 Fall Meeting",
+      "location": "Virtual",
+      "presentationType": "Poster"
+    }
+  ]
+}

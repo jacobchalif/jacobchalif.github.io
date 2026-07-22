@@ -1,0 +1,525 @@
+%
+%Academic CV LaTeX Template
+% Author: Dubasi Pavan Kumar
+% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: pavankumard.pg19.ma@nitp.ac.in
+%
+
+
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+\definecolor{gray}{RGB}{100,100,100}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=1.55cm, right=1.2cm, bottom=2.2cm}
+\setlength{\footskip}{12pt}
+\setlength{\headheight}{14pt} % Addressing fancyhdr warning
+
+
+
+% --- Last updated footer ---
+\usepackage{datetime2} % nice date formatting (optional but recommended)
+
+\newcommand{\lastupdated}{Last updated: \DTMtoday} % e.g., 2026-01-28
+
+\pagestyle{fancy}
+\fancyhf{} % clear header/footer
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{eso-pic}
+% Place the visible update stamp about 8 mm below the top edge.
+\AddToShipoutPictureFG{%
+  \AtPageUpperLeft{%
+    \put(\LenToUnit{\dimexpr\paperwidth-1.2cm\relax},\LenToUnit{-10mm}){%
+      \makebox(0,0)[r]{\small\textcolor{gray}{\textsc{\lastupdated}}}%
+    }%
+  }%
+}
+\usepackage{lastpage}
+% Mirror the update stamp at the physical bottom edge and center it.
+\AddToShipoutPictureFG{%
+  \AtPageLowerLeft{%
+    \put(\LenToUnit{\dimexpr\paperwidth/2\relax},\LenToUnit{10mm}){%
+      \makebox(0,0)[c]{\small\textcolor{gray}{\textsc{Page \thepage\ of \pageref*{LastPage}}}}%
+    }%
+  }%
+}
+
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\small{#4}} \\
+        \textit{\small{#3}} &  \small{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% Font options
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+
+
+% One spacing rule for every CV section.
+\titleformat{\section}{\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{5mm}{2mm}
+
+\begin{document}
+\headerfontiii
+\begin{center}
+    {\Huge\textbf{Jacob Chalif}}
+\end{center}
+\vspace{-6mm}
+\begin{center}
+    \small{\href{mailto:jchalif@uw.edu}{jchalif@uw.edu} \;\textbullet{}\; \href{https://jacobchalif.github.io}{jacobchalif.github.io}}
+\end{center}
+\vspace{-4mm}
+
+\section{\textbf{Education}}
+\begin{itemize}[leftmargin=0pt,label={},labelsep=0pt]
+\resumeSubheading
+{University of Washington}{Seattle, WA}
+{Ph.D. in Atmospheric and Climate Sciences}{Beginning Fall 2026}
+\small{
+\resumeItemListStart
+  \item Advisors: Becky Alexander and Alex Turner
+\resumeItemListEnd
+}
+
+\resumeSubheading
+{Dartmouth College}{Hanover, NH}
+{M. S. in Earth Sciences}{2024--2026 (expected)}
+\small{
+\resumeItemListStart
+  \item Advisor: Erich Osterberg
+  \item Thesis: Seasonal climate drivers of southeastern Siberian fire over the last 1,200 years from the Begguya (Alaska) ice core
+\resumeItemListEnd
+}
+
+\resumeSubheading
+{Dartmouth College}{Hanover, NH}
+{B. A. in Environmental Earth Sciences}{2017--2021}
+\small{
+\resumeItemListStart
+  \item Senior thesis: Effect of mid-20th-century jet stream waviness on the U. S. ``warming hole''
+\resumeItemListEnd
+}
+\end{itemize}
+
+\section{\textbf{Research Experience}}
+\begin{itemize}[leftmargin=0pt,label={},labelsep=0pt]
+\resumeSubheading
+{Dartmouth Ice, Climate, and Environment (ICE) Lab}{Hanover, NH}
+{Lab Manager and Research Assistant}{2021--Present}
+\small{
+\resumeItemListStart
+  \item Operate and maintain continuous-flow analysis (CFA) ice-core melter systems and analyze ice-core impurity geochemistry (dust, sea salts, sulfur species (MSA, SO4), heavy metals, fire tracers, and water isotopes)
+  \item Led projects measuring fire aerosols in the Denali ice core, reinterpreting Arctic MSA variability using atmospheric chemistry box modeling, and characterizing impurities in million-year-old ice from the Allan Hills, Antarctica
+\resumeItemListEnd
+}
+\end{itemize}
+
+\section{\textbf{Publications}}
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
+
+\item[\textbf{4}] \textbf{J. I. Chalif}, E. C. Osterberg, and T. L. Partridge (2025). \href{https://doi.org/10.1029/2024AV001399}{\textbf{A wavier polar jet stream contributed to the mid-20th century winter warming hole in the United States}}. In \textit{\textbf{AGU Advances 6, e2024AV001399}}. (Selected for an \href{https://eos.org/editor-highlights/the-mid-20th-century-winter-cooling-in-the-eastern-u-s-explained}{Editor's Highlight}.)
+
+\item[\textbf{3}] U. A. Jongebloed, \textbf{J. I. Chalif}, L. Tashmim, W. C. Porter, K. H. Bates, Q. Chen, E. C. Osterberg, B. G. Koffman, J. Cole-Dai, D. A. Winski, D. G. Ferris, K. J. Kreutz, C. P. Wake, and B. Alexander (2025). \href{https://doi.org/10.5194/acp-25-4083-2025}{\textbf{Dimethyl sulfide chemistry over the industrial era: comparison of key oxidation mechanisms and long-term observations}}. In \textit{\textbf{Atmospheric Chemistry and Physics 25, 4083--4106}}.
+
+\item[\textbf{2}] C. A. Henley, C. R. Meyer, \textbf{J. I. Chalif}, J. L. Hollmann, and R. Raskar (2025). \href{https://doi.org/10.1017/jog.2024.81}{\textbf{Measurement of snowpack density, grain size, and black carbon concentration using time-domain diffuse optics}}. In \textit{\textbf{Journal of Glaciology 71, e6}}.
+
+\item[\textbf{1}] \textbf{J. I. Chalif}, U. A. Jongebloed, E. C. Osterberg, B. G. Koffman, B. Alexander, D. A. Winski, D. J. Polashenski, K. Stamieszkin, D. G. Ferris, K. J. Kreutz, C. P. Wake, and J. Cole-Dai (2024). \href{https://doi.org/10.1038/s41561-024-01543-w}{\textbf{Pollution drives multidecadal decline in subarctic methanesulfonic acid}}. In \textit{\textbf{Nature Geoscience 17, 1016--1021}}.
+
+\end{enumerate}
+
+\section{\textbf{Publications in Review/Prep} \hfill \textcolor{gray}{\scriptsize R=In review/revision, Pxx=In prep for submission in 20xx}}
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
+
+\item[\textbf{R}] \textbf{J. I. Chalif}, E. C. Osterberg, J. E. Dibb, R. Edwards, D. G. Ferris, C. H. Guiterman, S. Hantson, J. R. Jasmann, U. A. Jongebloed, J. O. Kaplan, L. R. Kirkpatrick, B. G. Koffman, K. J. Kreutz, M. T. Leung, M. Lonergan, M. L. Schachterle, E. Scheuer, N. M. Kehrwald, E. S. Saltzman, C. P. Wake, and D. A. Winski. \textbf{Seasonal climate drivers of southeastern Siberian wildfire over the last 1,200 years.} \textit{In review.}
+
+\item[\textbf{R}] A. Choi, A. J. Carter, J. Marks-Peterson, S. Shackleton, J. Higgins, E. J. Brook, L. Kirkpatrick, \textbf{J. Chalif}, and S. M. Aarons. \textbf{Dust record from Allan Hills blue ice: toward extending the archive to 4000 ka.} \textit{In review.}
+
+\item[\textbf{R}] A. Hudak, A. Banerjee, C. Buizert, E. Brook, M. Kalk, L. Davidge, A. J. Schauer, E. J. Steig, N. Brown, L. Kirkpatrick, J.-M. Manos, \textbf{J. I. Chalif}, E. Osterberg, M. H. M. Miranda, E. Saltzman, Y. Yan, V. Hishamunda, and J. Higgins. \textbf{Fidelity and stratigraphy of the Antarctic Allan Hills old ice archive from Continuous Flow Analysis.} \textit{In review.}
+
+\item[\textbf{R}] B. G. Koffman, \textbf{J. I. Chalif}, S. Birkel, H. L. Brooks, D. A. Winski, G. Lewis, D. Polashenski, and E. C. Osterberg. \textbf{Disentangling source versus transport effects on atmospheric dust in alpine ice and snow.} \textit{In review.}
+
+\item[\textbf{P26}] \textbf{J. I. Chalif} et al. \textbf{Characterizing trace element impurities in the Allan Hills blue ice area.} \textit{Anticipated 2026 submission.}
+
+\item[\textbf{P26}] L. Kirkpatrick, \textbf{J. I. Chalif}, D. Brandis, A. Carter, A. Choi, L. Davidge, M. J. Handley, V. Hishamunda, U. A. Jongebloed, M. Kalk, E. V. Korotkikh, H. Lowes-Bicay, J. Marks-Peterson, A. J. Schauer, N. Stoll, L. Tipton, E. Brook, S. Aarons, C. Buizert, J. Cole-Dai, J. Higgins, B. Koffman, E. C. Osterberg, E. J. Steig, S. Shackleton, and T. J. Fudge. \textbf{Characterization of complex basal layering in an ancient Allan Hills ice core.} \textit{Anticipated 2026 submission.}
+
+\item[\textbf{P26}] L. Tipton et al. (including \textbf{J. I. Chalif}). \textbf{Causes of the Late Holocene dust spike in Antarctic ice cores.} \textit{Anticipated 2026 submission.}
+
+\item[\textbf{P26}] H. Brooks et al. (including \textbf{J. I. Chalif}). \textbf{A 1,200-year ice-core record of lead isotopes from the Denali, Alaska, ice core.} \textit{Anticipated 2026 submission.}
+
+\item[\textbf{P26}] L. Kirkpatrick et al. (including \textbf{J. I. Chalif}). \textbf{Denali ice-core water isotopes record precipitation-weighted temperature of the North Pacific.} \textit{Anticipated 2026 submission.}
+
+\end{enumerate}
+
+
+\section{\textbf{Research Funding}}
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
+\item[\textbf{2026}] Fieldwork support from the Dartmouth Changing Polar Regions cluster, Guarini School, Graduate Student Council, and Earth Sciences Department to drill ice cores at the Eclipse Icefield. Total grants: \$11,300.
+
+\item[\textbf{2025}] Subgrant from COLDEX. High-resolution CFA chemistry analysis of Allan Hills ice cores. Erich Osterberg (PI), Jacob Chalif (co-PI). Total grant: \$35,000.
+
+\item[\textbf{2024}] COLDEX ECR Grant. Detailed layer analysis of oldest ice, Phase II. Jacob Chalif (PI). Total grant: \$5,000.
+
+\item[\textbf{2024}] COLDEX ECR Grant. Sulfur history of the MIS 6/5e deglaciation. Jacob Chalif (PI), Ursula Jongebloed (co-PI). Total grant: \$7,000.
+
+\item[\textbf{2023}] COLDEX ECR Grant. Detailed layer analysis of oldest ice. Liam Kirkpatrick (PI), Jacob Chalif (co-PI). Total grant: \$5,000.
+\end{enumerate}
+
+\section{\textbf{Field Research}}
+\resumeSubHeadingListStart
+\resumeProject
+  {Eclipse Icefield, St. Elias Mountains (Yukon), Canada}{}
+  {May--June 2026}{}
+\vspace{-4mm}
+\small{
+\resumeItemListStart
+  \item Conceived the project and secured \$11,300 in funding to develop a high-resolution ice-core record of North Pacific aerosol transport
+  \item Led the recovery of four shallow firn cores (up to 20 m deep) and snowpit samples for multiproxy analysis of dust, wildfire soot, industrial pollution, marine aerosols, and PFAS
+  \item Collaborated with a University of Maine geophysics team using radar and ice-flow measurements to provide context for interpreting the ice-core records
+\resumeItemListEnd
+}
+\resumeProject
+  {Allan Hills, Antarctica}{}
+  {Nov 2024--Jan 2025}{}
+\vspace{-4mm}
+\small{
+\resumeItemListStart
+  \item Recovered more than 10,000 lb of ice from multiple sites using three drilling systems as part of the NSF Center for Oldest Ice Exploration (COLDEX)
+  \item Helped recover the oldest directly dated ice yet discovered---approximately 6.7 million years old---to investigate atmospheric composition and climate over millions of years
+  \item Conducted ApRES, ground-penetrating radar, and GPS surveys to map the ice sheet's internal structure and motion and guide the search for older ice
+\resumeItemListEnd
+}
+\resumeSubHeadingListEnd
+
+\section{\textbf{Professional Service}}
+\resumeHeadingSkillStart
+  \resumeSubItem{Peer reviewer:}
+    {AGU Advances, Geophysical Research Letters, Environmental Research Letters, Climate of the Past, Journal of Geophysical Research: Atmospheres}
+  \resumeSubItem{Ice Core Early Career Researcher Workshop (ICECReW) organizer:}
+    {2024 and 2025 (lead organizer in 2025)}
+\resumeHeadingSkillEnd
+
+\section{\textbf{Honors and Awards}}
+\resumeHeadingSkillStart
+  \resumeSubItem{Atmospheric and Climate Sciences Scholarship Award:}
+    {University of Washington, 2026}
+  \resumeSubItem{Atmospheric and Climate Sciences Top Scholar Award:}
+    {University of Washington, 2026--2027}
+  \resumeSubItem{Program on Climate Change Graduate Fellow:}
+    {University of Washington, 2026--2027}
+  \resumeSubItem{EARS faculty award for outstanding publication by a graduate student:}
+    {Dartmouth, 2026}
+  \resumeSubItem{NSF GRFP Honorable Mention:}
+    {2025}
+  \resumeSubItem{Magna Cum Laude:}
+    {Dartmouth, 2021}
+  \resumeSubItem{High honors in Earth Sciences:}
+    {Dartmouth, 2021}
+  \resumeSubItem{Warren F. Upham 1871 Geology Award for Outstanding Senior Thesis:}
+    {Dartmouth, 2021}
+  \resumeSubItem{Three citations for academic excellence:}
+    {Dartmouth undergraduate coursework: (1) Introduction to Programming and Computation, (2) Climate Dynamics, and (3) Geomorphology}
+\resumeHeadingSkillEnd
+
+\section{\textbf{Science Outreach}}
+\resumeHeadingSkillStart
+  \resumeSubItem{Climate of Hope / Project 2100:}
+    {Delivered one of two keynote addresses, alongside Richard Alley, at the February 2026 Chicago Project 2100 conference for high school students; also planned activities for teachers at the related Climate of Hope event}
+  \resumeSubItem{Middle schools:}
+    {Spoke with middle-school students in New York (remotely) and Vermont (in person) about Antarctic fieldwork and ice cores in April 2025, including demonstrations with Antarctic ice samples}
+  \resumeSubItem{School of Ice:}
+    {Designed and taught a lesson on ice-core CFA techniques and chemistry analysis for educators at minority-serving institutions in June 2023 and June 2025, featuring the melting of a Greenland ice core and real-time interpretation of the results}
+  \resumeSubItem{Great Issues Scholars:}
+    {Led sessions for Dartmouth's Great Issues Scholars program in 2023, 2024, and 2025 on how ice-core science informs 21st-century climate change}
+  \resumeSubItem{Media outreach:}
+    {\href{https://www.climate.us/news-features/understanding-climate/despite-big-storms-us-winters-are-still-warming}{Climate.us}, \href{https://revkin.substack.com/p/extreme-winter-weather-in-a-human}{Sustain What with Andy Revkin}, \href{https://grist.org/climate/yes-climate-change-can-supercharge-a-winter-storm-heres-how/}{Grist}, \href{https://www.bostonglobe.com/2026/01/03/science/new-england-cold-climate-change}{Boston Globe}, \href{https://eos.org/editor-highlights/the-mid-20th-century-winter-cooling-in-the-eastern-u-s-explained}{Eos}, \href{https://www.newscientist.com/article/2485835-extreme-winter-weather-isnt-down-to-a-wavier-jet-stream/}{New Scientist}, \href{https://www.sueddeutsche.de/projekte/artikel/wissen/klimawandel-jetstream-auswirkungen-extremwetter-e904764/?reduced=true}{Süddeutsche Zeitung (German)}, \href{https://www.newsday.com/long-island/environment/antarctica-ice-climate-change-huntington-man-ipn0sgmd}{Newsday}, \href{https://www.nhpr.org/nh-news/2024-12-29/a-dartmouth-grad-student-is-in-antarctica-this-winter-on-a-mission-to-find-the-worlds-oldest-ice}{NHPR} (also \href{https://www.vnews.com/A-Dartmouth-grad-student-is-in-Antarctica-this-winter-on-a-mission-to-find-the-world-s-oldest-ice-58689922}{Valley News} and \href{https://www.concordmonitor.com/A-Dartmouth-grad-student-is-in-Antarctica-this-winter-on-a-mission-to-find-the-world-s-oldest-ice-58728766}{Concord Monitor}), \href{https://vtdigger.org/2025/01/19/winter-in-florida-this-vermonter-has-reason-to-travel-farther-south-to-antarctica/}{VT Digger}, WCAX (\href{https://www.wcax.com/2024/12/05/dartmouth-grad-student-antarctica-collect-planets-oldest-ice-cores/}{one} and \href{https://www.wcax.com/2024/12/09/life-camp-antarctica/}{two}), \href{https://whdh.com/news/dartmouth-grad-student-among-team-analyzing-ancient-ice-at-the-south-pole/}{WHDH}, \href{https://www.newsweek.com/ice-core-analysis-uncovers-human-impact-arctic-atmosphere-1959702}{Newsweek}, \href{https://thevermontstandard.com/woodstocks-jacob-chalif-will-join-an-elite-group-of-scientists-to-study-ice-cores-in-antarctica/}{Vermont Standard}, \href{https://www.earth.com/news/air-pollution-alters-the-atmosphere-in-the-remote-arctic/}{Earth.com}, and Dartmouth News (\href{https://home.dartmouth.edu/news/2024/09/ice-cores-show-pollutions-impact-arctic-atmosphere}{one} and \href{https://home.dartmouth.edu/news/2025/06/study-winter-jet-stream-was-erratic-climate-change}{two})}
+\resumeHeadingSkillEnd
+
+\section{\textbf{Skills and Certifications}}
+\resumeHeadingSkillStart
+  \resumeSubItem{Programming and Geospatial Tools:}
+    {Python, MATLAB, Julia, R, C, ArcGIS/QGIS, HTML web design}
+  \resumeSubItem{Research Skills:}
+    {Large-volume climate data management (reanalyses, global climate/chemistry model output), geochemical analysis (SP2, particle counters), ice core melter systems, microprocessors, DC circuit design and solar power}
+  \resumeSubItem{Medical Training:}
+    {WFR (exp. 07/2028), CPR (exp. 07/2027)}
+\resumeHeadingSkillEnd
+
+\section{\textbf{Local Climate and Environment Engagement}}
+\resumeHeadingSkillStart
+  \resumeSubItem{Sustainable Woodstock:}
+    {volunteer and trustee (treasurer), 2023--2026}
+  \resumeSubItem{Upper Valley Adaptation Workgroup:}
+    {member, 2023--2025}
+\resumeHeadingSkillEnd
+
+\section{\textbf{Undergraduate Student Mentoring}}
+\resumeHeadingSkillStart
+  \resumeSubItem{Kat Adelman:}
+    {Dartmouth '21, lab assistant (2 terms)}
+  \resumeSubItem{Victoria Hofner:}
+    {Dartmouth '22, lab assistant (2 terms)}
+  \resumeSubItem{Liam Kirkpatrick:}
+    {Dartmouth '22, research and lab assistant (3 terms)}
+  \resumeSubItem{Abigail Lambert:}
+    {Dartmouth '22, lab assistant (2 terms)}
+  \resumeSubItem{Eric Youth:}
+    {Dartmouth '22, lab assistant (2 terms), also advised senior honors thesis}
+  \resumeSubItem{Parker Jones:}
+    {Dartmouth '24, lab assistant (1 term)}
+  \resumeSubItem{Chloe Nicolao:}
+    {Dartmouth '24, lab assistant (1 term)}
+  \resumeSubItem{Cady Rancourt:}
+    {Dartmouth '24, Sophomore Science Scholar, studying ``weather whiplash''}
+  \resumeSubItem{John DeForest:}
+    {Dartmouth '25, lab assistant (1 term)}
+  \resumeSubItem{Maggie Druckenmiller:}
+    {Dartmouth '25, lab assistant (1 term) and UGAR-funded project (1 term)}
+  \resumeSubItem{Erica Simon:}
+    {Dartmouth '25, lab assistant (1 term)}
+  \resumeSubItem{Laura Wilson:}
+    {Dartmouth '25, lab assistant (2 terms)}
+  \resumeSubItem{Albert Zhang:}
+    {Dartmouth '25, lab assistant (1 term)}
+  \resumeSubItem{Cooper Camp:}
+    {Dartmouth '26, lab assistant (1 term)}
+  \resumeSubItem{Keller Bailey:}
+    {Dartmouth '27, lab assistant (1 term)}
+  \resumeSubItem{Blaine Boxwell:}
+    {Dartmouth '27, lab assistant (2 terms)}
+  \resumeSubItem{Aleaokalani Kahele:}
+    {Dartmouth '27, lab assistant (2 terms)}
+  \resumeSubItem{Margaret Raffo:}
+    {Dartmouth '28, research and lab assistant, studying radionuclides (2 terms)}
+  \resumeSubItem{Talia Hoffner:}
+    {Dartmouth '28, lab assistant (1 terms)}
+\resumeHeadingSkillEnd
+
+\section{\textbf{Conference Abstracts}}
+\small{
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
+\item[\textbf{2026}] Normandin, J., Ryu, Y., Chalif, J. I., Higgins, J. A., Sigman, D., 2026. Constraining Photolytic Parameters Using Nitrate Isotopes in Allan Hills Firn. COLDEX Annual Meeting, Austin, TX. (Poster)
+
+\item[] Chalif, J. I., Osterberg, E. C., Winski, D. A., Kehrwald, N. M., Lonergan, M., Kaplan, J. O., Jongebloed, U. A., Guiterman, C. H., Edwards, R., Leung, M. T., Schachterle, M. L., Jasmann, J. R., Dibb, J. E., Scheuer, E., Kirkpatrick, L. R., Ferris, D. G., Handley, M. J., Hantson, S., Koffman, B. G., Kreutz, K. J., Saltzman, E. S., Wake, C. P., 2026. A Siberian paleofire proxy from the Begguya (Denali) ice core. International Partnerships in Ice Core Science 2026 Conference, Banff, Canada.
+
+\item[] Kirkpatrick, L., Chalif, J., Brandis, D., Carter, A., Choi, A., Davidge, L., Handley, M., Hishamunda, V., Jongebloed, U., Kalk, M., Korotkikh, E., Lowes-Bicay, H., Marks-Peterson, J., Schauer, A., Stoll, N., Tipton, L., Brook, E., Aarons, S., Buizert, C., Cole-Dai, J., Higgins, J., Koffman, B., Osterberg, E., Steig, E., Shackleton, S., Fudge, T., 2026. 3D ECM and multiproxy constraints on layering and paleoclimate preservation in ancient Allan Hills ice. International Partnerships in Ice Core Science 2026 Conference, Banff, Canada.
+
+\item[] Carter, A., Choi, A., Koornkeef, J., Marks-Peterson, J., Shackleton, S., Higgins, J., Brook, E., Kirkpatrick, L., Chalif, J., Aarons, S., 2026. Extending the Antarctic dust record: Geochemical and physical constraints from 4000--500 ka ice at the Allan Hills Blue Ice Area. International Partnerships in Ice Core Science 2026 Conference, Banff, Canada.
+
+\item[] Koffman, B., Winski, D., Chalif, J., Lightman, S., Johnson, M., Lemoine, A., Mullen, K., Osterberg, E., Kreutz, K., Wake, C., 2026. Begguya ice core dust reveals rapid Younger Dryas deglaciation across southern Alaska. International Partnerships in Ice Core Science 2026 Conference, Banff, Canada.
+
+\item[] Winski, D., Kreutz, K., Koffman, B., Osterberg, E., Skelton, E., Brooks, H., Gavin, M., Keirstead, C., McCullough, S., Introne, D., Handley, M., Chalif, J., Williams, O., Buizert, C., Kirkpatrick, L., Jenk, T., Fang, L., Kurbatov, A., Wake, C., Lemoine, A., Mullen, K., 2026. Younger Dryas climate interval recorded in water isotopes and trace metals in the Begguya ice cores. International Partnerships in Ice Core Science 2026 Conference, Banff, Canada.
+
+\item[] Carter, A., Choi, A., Koornkeef, J., Marks-Peterson, J., Shackleton, S., Higgins, J., Brook, E., Kirkpatrick, L., Chalif, J., Aarons, S., 2026. Extending the Antarctic dust record: Geochemical and physical constraints from 4000--500 ka ice at the Allan Hills Blue Ice Area. Goldschmidt 2026 Conference Session 13h, Montreal, Canada.
+
+\item[] Hudak, A., et al. (including Chalif, J.), 2026. Fidelity and stratigraphy of the Antarctic Allan Hills old ice archive from Continuous Flow Analysis. EGU General Assembly 2026 Session CL1.2.7, Vienna, Austria.
+
+\item[\textbf{2025}] Brooks, H., Handley, M., Kreutz, K., Chalif, J., Osterberg, E., Jongebloed, U., Winski, D., Kirkpatrick, L., Koffman, B., Wake, C., Schwikowski, M., Skelton, E., Ferris, D., 2025. Increasing Complexity of Asian Pb Emissions Throughout Industrialization (800 to 2022 CE) as Revealed in the Denali Ice Core Records, Begguya, Alaska. AGU 2025 Fall Meeting, New Orleans, LA. (Poster)
+
+\item[] Chalif, J., Osterberg, E., Winski, D., Kehrwald, N., Lonergan, M., Guiterman, C., Kaplan, J., Jongebloed, U., Youth, E., Edwards, R., Leung, M., Schachterle, M., Jasmann, J., Dibb, J., Scheuer, E., Macken, A., Hantson, S., Kirkpatrick, L., Ferris, D., Handley, M., Kreutz, K., Saltzman, E., Wake, C., 2025. Atmospheric chemistry implications from Denali ice core fire measurements. ICECAP Workshop, Seattle, WA. (Talk)
+
+\item[] Jongebloed, U., Chalif, J., Tashmim, L., Porter, W., Bates, K., Chen, Q., Osterberg, E., Koffman, B., Winski, D., Kreutz, K., Ferris, D., Wake, C., Alexander, B., 2025. Dimethyl sulfide oxidation over the industrial era: comparison of long-term observations and several chemical mechanisms. ICECAP Workshop, Seattle, WA. (Talk)
+
+\item[] Koffman, B., Chalif, J., et al., 2025. Local versus long-distance dust provenance in a 2019 shallow core at Mount Hunter, Alaska. 4th Annual US Ice Core Community Meeting, Minneapolis, MN. (Poster)
+
+\item[] Kirkpatrick, L., Chalif, J. I., et al., 2025. Updates on coordinated ECM and multiproxy sampling in Allan Hills ice. 4th Annual US Ice Core Community Meeting, Minneapolis, MN. (Talk)
+
+\item[] Chalif, J., Osterberg, E., Winski, D., Kehrwald, N., Lonergan, M., Guiterman, C., Kaplan, J., Jongebloed, U., Youth, E., Edwards, R., Leung, M., Schachterle, M., Jasmann, J., Dibb, J., Scheuer, E., Macken, A., Hantson, S., Kirkpatrick, L., Ferris, D., Handley, M., Kreutz, K., Saltzman, E., Wake, C., 2025. A Siberian fire proxy from the Denali ice core. 4th Annual US Ice Core Community Meeting, Minneapolis, MN. (Talk)
+
+\item[\textbf{2024}] Koffman, B., Jongebloed, U., Chalif, J., Andreasen, J., Fudge, T. J., 2024. ICECReW: Connecting and Training Icy Early Career Researchers with an Annual Workshop. AGU 2024 Fall Meeting, Washington, DC. (Poster)
+
+\item[] Choi, A., Peterson, J., Kalk, M., Kirkpatrick, L., Fudge, T. J., Chalif, J., Tipton, L., Davidge, L., Sliwinski, M., Osterberg, E., Koffman, B., Steig, E., Higgins, J., Shackleton, S., Brook, E., 2024. A High Resolution Look at Carbon Dioxide and Methane Variations in ALHIC1901. AGU 2024 Fall Meeting, Washington, DC. (Poster)
+
+\item[] Jongebloed, U., Chalif, J., Tashmim, L., Porter, W., Bates, K., Chen, Q., Osterberg, E., Koffman, B., Winski, D., Kreutz, K., Ferris, D., Wake, C., Alexander, B., 2024. Dimethyl sulfide oxidation over the industrial era: comparison of long-term observations and several chemical mechanisms. AGU 2024 Fall Meeting, Washington, DC. (Poster)
+
+\item[] Brooks, H., Handley, M., Kreutz, K., Chalif, J., Osterberg, E., Jongebloed, U., Winski, D., Kirkpatrick, L., Koffman, B., Wake, C., Schwikowski, M., Skelton, E., Ferris, D., 2024. Novel lead (Pb) record tracing the impact of human policy and culture on Asian pollution emissions in the North Pacific atmosphere over the last 1,600 years. AGU 2024 Fall Meeting, Washington, DC. (Poster)
+
+\item[] Osterberg, E. C., Chalif, J. I., Winski, D., Kehrwald, N., Lonergan, M., Youth, E., Kreutz, K., Wake, C., Ferris, D., Edwards, R., Dibb, J., Saltzman, E., Hantson, S., 2024. North Pacific Wildfire Activity over the past Millennium from a Suite of Alpine Ice Cores. AGU 2024 Fall Meeting, Washington, DC. (Poster)
+
+\item[] Jongebloed, U. A., Chalif, J. I., Tashmim, L., Porter, W. C., Bates, K. H., Chen, Q., Osterberg, E. C., Koffman, B. G., Cole-Dai, J., Winski, D. A., Ferris, D. G., Kreutz, K. J., Wake, C. P., Alexander, B., 2024. Comparison of four DMS oxidation mechanisms with long-term observations of DMS oxidation products indicates missing DMS chemistry. GEOS-Chem Meeting, Chicago, IL. (Poster)
+
+\item[] Chalif, J. I., Osterberg, E. C., Kreutz, K., Winski, D., Wake, C., Ferris, D., Koffman, B., Kirkpatrick, L., Handley, M., Introne, D., 2024. Integrity of North Pacific Ice Core Climate Archives in a Warming World. 3rd Annual US Ice Core Open Science Meeting, Portland, ME. (Poster)
+
+\item[] Brooks, H., Handley, M., Kreutz, K., Winski, D., Chalif, J., Osterberg, E. C., 2024. Echoes from the Arctic: Unravelling Asia's Past Through Pb Fluctuations in Alaskan Ice Cores. 3rd Annual US Ice Core Open Science Meeting, Portland, ME. (Talk)
+
+\item[] Jongebloed, U. A., Chalif, J. I., Tashmim, L., Porter, W. C., Bates, K. H., Chen, Q., Osterberg, E. C., Koffman, B. G., Cole-Dai, J., Winski, D. A., Ferris, D. G., Kreutz, K. J., Wake, C. P., Alexander, B., 2024. Comparison of four DMS oxidation mechanisms with long-term observations of DMS oxidation products indicates missing DMS chemistry. 3rd Annual US Ice Core Open Science Meeting, Portland, ME. (Talk)
+
+\item[] Kirkpatrick, L., Chalif, J. I., et al., 2024. Coordinated ECM, Water Isotope, Chemistry, and Dust Measurements Provide New Insights into Allan Hills Layering. 3rd Annual US Ice Core Open Science Meeting, Portland, ME. (Talk)
+
+\item[] Winski, D., Chalif, J. I., et al., 2024. A North Pacific ice core record of summer climate and wildfire history during the last 1000 years. 3rd Annual US Ice Core Open Science Meeting, Portland, ME. (Talk)
+
+\item[] Tipton, L., Osterberg, E. C., Koffman, B., Benello, M., Chalif, J., Anderson, K., Chesler, A., Ferris, D., Kreutz, K., Cole-Dai, J., 2024. Causes of the Late Holocene Dust Spike in Antarctic Ice Cores. 3rd Annual US Ice Core Open Science Meeting, Portland, ME. (Poster)
+
+\item[] Chalif, J. I., Jongebloed, U., Osterberg, E. C., Koffman, B., Alexander, B., Winski, D., Polashenski, D., Stamieszkin, K., Ferris, D., Kreutz, K., Wake, C., Cole-Dai, J., 2024. Pollution drives enigmatic decline in subarctic biogenic sulfur. 52nd International Arctic Workshop, Amherst, MA. (Poster)
+
+\item[] Brooks, H., Handley, M., Kreutz, K., Winski, D., Chalif, J., Osterberg, E. C., 2024. Novel lead (Pb) isotope record tracking the impact of policy and the COVID-19 pandemic on Asian pollution emissions deposited in Alaskan ice cores. 52nd International Arctic Workshop, Amherst, MA. (Talk)
+
+\item[\textbf{2023}] Kirkpatrick, L., Fudge, T. J., Chalif, J., Tipton, L., 2023. Stratigraphy in highly thinned ice cores. AGU 2023 Fall Meeting. (Talk)
+
+\item[] Jongebloed, U., Chalif, J., Tashmim, L., Porter, W. C., Alexander, B., 2023. Comparison of ice core vs. modeled changes in DMS oxidation chemistry over the Industrial Era. AGU 2023 Fall Meeting. (Poster)
+
+\item[] Macken, A., Osterberg, E. C., Winski, D., Chalif, J., and others, 2023. Climatological and Topographical Drivers of Wildfire Growth in Alaska: A Remote Sensing Analysis of 14 Wildfire Events (2001--2019). AGU 2023 Fall Meeting. (Poster)
+
+\item[] Brooks, H., Handley, M., Kreutz, K., Winski, D., Chalif, J., Osterberg, E. C., Kindstedt, I., Erwin, E., Braddock, S., Kirkpatrick, L. R., Wake, C., Kurbatov, A., Gerbi, C., 2023. Evaluation of public policy and COVID-19 pandemic impacts on historic Asian pollution emissions using Alaskan ice core lead data. AGU 2023 Fall Meeting. (Poster)
+
+\item[] Tipton, L., Osterberg, E. C., Koffman, B., Kurbatov, A., Chalif, J., Adelman, K., Anderson, K., Chesler, A., Ferris, D., Kreutz, K., Cole-Dai, J., 2023. Causes of the Late Holocene Dust Spike in Antarctic Ice Cores. AGU 2023 Fall Meeting. (Poster)
+
+\item[] Chalif, J., Jongebloed, U., Osterberg, E. C., Koffman, B., Alexander, B., Polashenski, D., Winski, D., Kreutz, K., Wake, C., Stamieszkin, K., Ferris, D., 2023. Anthropogenic NOx emissions, not declining marine primary production, drive reduced modern MSA levels in the Denali ice core. 2nd Annual US Ice Core Open Science Meeting, Seattle, WA. (Talk)
+
+\item[] Jongebloed, U., Chalif, J., Larrick, C., Cole-Dai, J., Salimi, S., Edouard, S., Geng, L., Osterberg, E. C., Alexander, B., 2023. Industrial-Era decline in Arctic methanesulfonic acid is offset by increased biogenic sulfate aerosol. 2nd US Ice Core Open Science Meeting, Seattle, WA. (Talk)
+
+\item[] Tipton, L., Osterberg, E. C., Koffman, B., Kurbatov, A., Chalif, J., Adelman, K., Anderson, K., Chesler, A., Ferris, D., Kreutz, K., Cole-Dai, J., 2023. What caused the Late Holocene Dust Increase in Antarctic Ice Cores? 2nd US Ice Core Open Science Meeting, Seattle, WA. (Poster)
+
+\item[\textbf{2022}] Osterberg, E. C., Chalif, J., Koffman, B., Polashenski, D., Winski, D., Kreutz, K., Wake, C., Stamieszkin, K., Ferris, D., 2022. Modern Decline in North Pacific Ocean Primary Production is Unprecedented for the Past Millennium in the Denali Ice Core. AGU 2022 Fall Meeting. (Talk)
+
+\item[] Youth, E., Osterberg, E. C., Lonergan, M., Chalif, J., Winski, D., Kreutz, K., Wake, C., Ferris, D., Saltzman, E., 2022. 1000 Years of Wildfire Activity in the North Pacific from Three Ice Cores. AGU 2022 Fall Meeting. (Poster)
+
+\item[] Brooks, H., Handley, M., Kreutz, K., Winski, D., Chalif, J., Osterberg, E. C., Kindstedt, I., Erwin, E., Braddock, S., Kirkpatrick, L. R., Wake, C., Kurbatov, A., Gerbi, C., 2022. Evaluating Asian Policy- and Pandemic-Related Emissions Impacts Using Ice Core Pb Concentration and Isotope Ratio Data from Mt. Hunter (Begguya) \textasciitilde{}800--2022 CE. AGU 2022 Fall Meeting. (Poster)
+
+\item[] Chalif, J., Osterberg, E. C., Winski, D., Kreutz, K., Edwards, R., Wake, C., Dibb, J., Scheuer, E., Saltzman, E., Hantson, S., Kehrwald, N., Lonergan, M., 2022. A North Pacific Paleofire Proxy from the Denali Ice Core. 3rd Open Science Meeting of the International Partnerships in Ice Core Sciences, Crans-Montana, Switzerland. (Poster)
+
+\item[] Lonergan, M., Osterberg, E. C., Winski, D., Kreutz, K., Wake, C., Chalif, J., Ferris, D., 2022. Wildfire Activity in the Denali Ice Core Catchment. 1st US Ice Core Open Science Meeting, La Jolla, CA. (Talk)
+
+\item[] Chalif, J., Osterberg, E. C., Winski, D., Kreutz, K., Edwards, R., Wake, C., Dibb, J., Scheuer, E., Saltzman, E., Hantson, S., Kehrwald, N., Lonergan, M., 2022. Updates on a North Pacific Paleofire Proxy from the Denali Ice Core. 1st US Ice Core Open Science Meeting, La Jolla, CA. (Poster)
+
+\item[\textbf{2021}] Chalif, J., Osterberg, E. C., Partridge, T., 2021. Effects and implications of enhanced jet stream waviness over North America during the 1950s--1970s. AGU 2021 Fall Meeting, Virtual. (Poster)
+\end{enumerate}
+}
+
+\end{document}

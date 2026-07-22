@@ -27,6 +27,29 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - uses: wacky6/action-setup-tectonic@v3
+        with:
+          tectonic-version: "0.16.9"
+      - name: Generate current CV PDF
+        run: |
+          node scripts/generate-cv.mjs
+          tectonic -X compile cv/generated/main.tex --outdir cv/generated
+          cp cv/generated/main.pdf public/documents/Jacob_Chalif_CV.pdf
+      - name: Generate mobile CV previews
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils webp
+          mkdir -p /tmp/cv-pages
+          pdftoppm -png -r 150 public/documents/Jacob_Chalif_CV.pdf /tmp/cv-pages/page
+          rm -f public/documents/cv-pages/page-*.webp
+          page=0
+          for image in /tmp/cv-pages/page-*.png; do
+            page=$((page + 1))
+            cwebp -quiet -q 88 "$image" -o "public/documents/cv-pages/page-${page}.webp"
+          done
+          node -e "require('fs').writeFileSync('content/cv-pages.json', JSON.stringify({pageCount:Number(process.argv[1])}, null, 2)+'\n')" "$page"
+      - name: Exclude the private server-only Studio from the static public export
+        run: rm -rf app/cv-studio app/api/cv-studio
       - run: pnpm run build:pages
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const nav = [
   ["Home", "/"], ["Research", "/research"], ["Fieldwork", "/fieldwork"], ["Publications", "/publications"],
-  ["News", "/news"], ["CV", "/cv"],
+  ["News", "/news"], ["About", "/about"], ["CV", "/cv"],
 ];
 
 export function SiteHeader({ inverse = false }: { inverse?: boolean }) {
