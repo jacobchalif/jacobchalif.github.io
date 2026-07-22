@@ -469,7 +469,7 @@ img[src*="extreme-heat-reuters"]{object-position:center center}
 .studio-list>button.selected.active{border-color:var(--studio-accent);box-shadow:inset 3px 0 var(--studio-accent),0 0 0 1px var(--studio-accent)}
 .studio-list>button{position:relative;transition:transform .14s ease,opacity .14s ease,border-color .14s ease,background-color .14s ease}
 .studio-list>button.dragging{transform:scale(.94);opacity:.42}
-.studio-list>button.drop-before::before,.studio-list>button.drop-after::after{content:"";position:absolute;left:5px;right:5px;height:4px;border-radius:999px;background:var(--studio-accent);box-shadow:0 0 0 2px var(--studio-bg),0 0 12px color-mix(in srgb,var(--studio-accent) 70%,transparent);z-index:3}
+.studio-list>button.drop-before::before,.studio-list>button.drop-after::after{content:"";position:absolute;left:5px;right:5px;height:4px;border-radius:999px;background:var(--studio-accent);box-shadow:0 0 0 2px var(--studio-bg),0 0 12px rgba(96,165,250,.5);z-index:3}
 .studio-list>button.drop-before::before{top:-7px}
 .studio-list>button.drop-after::after{bottom:-7px}
 .studio-list>button.studio-add-entry{cursor:pointer;border:2px dashed var(--studio-accent);background:var(--studio-accent-soft);color:var(--studio-accent);box-shadow:none}
