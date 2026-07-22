@@ -27,7 +27,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - uses: wacky6/action-setup-tectonic@v3
+      - uses: wtfjoke/setup-tectonic@v4
         with:
           tectonic-version: "0.16.9"
       - name: Generate current CV PDF
