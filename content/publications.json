@@ -1,5 +1,53 @@
 [
   {
+    "id": "chalif-2026-siberian-wildfire",
+    "year": "2026",
+    "status": "in_review",
+    "title": "Seasonal climate drivers of southeastern Siberian wildfire over the last 1,200 years",
+    "authors": "J. I. Chalif, E. C. Osterberg, J. E. Dibb, R. Edwards, D. G. Ferris, C. H. Guiterman, S. Hantson, J. R. Jasmann, U. A. Jongebloed, J. O. Kaplan, L. R. Kirkpatrick, B. G. Koffman, K. J. Kreutz, M. T. Leung, M. Lonergan, M. L. Schachterle, E. Scheuer, N. M. Kehrwald, E. S. Saltzman, C. P. Wake, and D. A. Winski",
+    "journal": "In review",
+    "doi": "",
+    "highlightHref": "",
+    "showWebsite": true,
+    "showCv": true
+  },
+  {
+    "id": "koffman-2026-dust-transport",
+    "year": "2026",
+    "status": "in_review",
+    "title": "Disentangling source versus transport effects on atmospheric dust in alpine ice and snow",
+    "authors": "B. G. Koffman, J. I. Chalif, S. Birkel, H. L. Brooks, D. A. Winski, G. Lewis, D. Polashenski, and E. C. Osterberg",
+    "journal": "In review",
+    "doi": "",
+    "highlightHref": "",
+    "showWebsite": true,
+    "showCv": true
+  },
+  {
+    "id": "choi-2026-allan-hills-dust",
+    "year": "2026",
+    "status": "in_review",
+    "title": "Dust record from Allan Hills blue ice: toward extending the archive to 4000 ka",
+    "authors": "A. Choi, A. J. Carter, J. Marks-Peterson, S. Shackleton, J. Higgins, E. J. Brook, L. Kirkpatrick, J. Chalif, and S. M. Aarons",
+    "journal": "In review",
+    "doi": "",
+    "highlightHref": "",
+    "showWebsite": true,
+    "showCv": true
+  },
+  {
+    "id": "hudak-2026-allan-hills-fidelity",
+    "year": "2026",
+    "status": "in_review",
+    "title": "Fidelity and stratigraphy of the Antarctic Allan Hills old ice archive from Continuous Flow Analysis",
+    "authors": "A. Hudak, A. Banerjee, C. Buizert, E. Brook, M. Kalk, L. Davidge, A. J. Schauer, E. J. Steig, N. Brown, L. Kirkpatrick, J.-M. Manos, J. I. Chalif, E. Osterberg, M. H. M. Miranda, E. Saltzman, Y. Yan, V. Hishamunda, and J. Higgins",
+    "journal": "In review",
+    "doi": "",
+    "highlightHref": "",
+    "showWebsite": true,
+    "showCv": true
+  },
+  {
     "id": "chalif-2025-wavier-jet-stream",
     "year": "2025",
     "status": "published",
@@ -43,54 +91,6 @@
     "authors": "J. I. Chalif, U. A. Jongebloed, E. C. Osterberg, B. G. Koffman, B. Alexander, D. A. Winski, D. J. Polashenski, K. Stamieszkin, D. G. Ferris, K. J. Kreutz, C. P. Wake, and J. Cole-Dai",
     "journal": "Nature Geoscience 17, 1016–1021",
     "doi": "https://doi.org/10.1038/s41561-024-01543-w",
-    "highlightHref": "",
-    "showWebsite": true,
-    "showCv": true
-  },
-  {
-    "id": "chalif-2026-siberian-wildfire",
-    "year": "2026",
-    "status": "in_review",
-    "title": "Seasonal climate drivers of southeastern Siberian wildfire over the last 1,200 years",
-    "authors": "J. I. Chalif, E. C. Osterberg, J. E. Dibb, R. Edwards, D. G. Ferris, C. H. Guiterman, S. Hantson, J. R. Jasmann, U. A. Jongebloed, J. O. Kaplan, L. R. Kirkpatrick, B. G. Koffman, K. J. Kreutz, M. T. Leung, M. Lonergan, M. L. Schachterle, E. Scheuer, N. M. Kehrwald, E. S. Saltzman, C. P. Wake, and D. A. Winski",
-    "journal": "In review",
-    "doi": "",
-    "highlightHref": "",
-    "showWebsite": true,
-    "showCv": true
-  },
-  {
-    "id": "choi-2026-allan-hills-dust",
-    "year": "2026",
-    "status": "in_review",
-    "title": "Dust record from Allan Hills blue ice: toward extending the archive to 4000 ka",
-    "authors": "A. Choi, A. J. Carter, J. Marks-Peterson, S. Shackleton, J. Higgins, E. J. Brook, L. Kirkpatrick, J. Chalif, and S. M. Aarons",
-    "journal": "In review",
-    "doi": "",
-    "highlightHref": "",
-    "showWebsite": true,
-    "showCv": true
-  },
-  {
-    "id": "hudak-2026-allan-hills-fidelity",
-    "year": "2026",
-    "status": "in_review",
-    "title": "Fidelity and stratigraphy of the Antarctic Allan Hills old ice archive from Continuous Flow Analysis",
-    "authors": "A. Hudak, A. Banerjee, C. Buizert, E. Brook, M. Kalk, L. Davidge, A. J. Schauer, E. J. Steig, N. Brown, L. Kirkpatrick, J.-M. Manos, J. I. Chalif, E. Osterberg, M. H. M. Miranda, E. Saltzman, Y. Yan, V. Hishamunda, and J. Higgins",
-    "journal": "In review",
-    "doi": "",
-    "highlightHref": "",
-    "showWebsite": true,
-    "showCv": true
-  },
-  {
-    "id": "koffman-2026-dust-transport",
-    "year": "2026",
-    "status": "in_review",
-    "title": "Disentangling source versus transport effects on atmospheric dust in alpine ice and snow",
-    "authors": "B. G. Koffman, J. I. Chalif, S. Birkel, H. L. Brooks, D. A. Winski, G. Lewis, D. Polashenski, and E. C. Osterberg",
-    "journal": "In review",
-    "doi": "",
     "highlightHref": "",
     "showWebsite": true,
     "showCv": true
