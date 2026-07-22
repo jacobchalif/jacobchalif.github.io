@@ -465,6 +465,8 @@ img[src*="extreme-heat-reuters"]{object-position:center center}
 .studio-shell nav button.active{background:var(--studio-panel);box-shadow:0 5px 18px rgba(3,10,25,.12)}
 .studio-list>button{background:var(--studio-panel);border-color:var(--studio-rule)}
 .studio-list>button.active{border-color:var(--studio-accent);box-shadow:inset 3px 0 var(--studio-accent)}
+.studio-list>button.selected{background:var(--studio-accent-soft);border-color:color-mix(in srgb,var(--studio-accent) 55%,var(--studio-rule))}
+.studio-list>button.selected.active{border-color:var(--studio-accent);box-shadow:inset 3px 0 var(--studio-accent),0 0 0 1px var(--studio-accent)}
 .studio-list>button.studio-add-entry{cursor:pointer;border:2px dashed var(--studio-accent);background:var(--studio-accent-soft);color:var(--studio-accent);box-shadow:none}
 .studio-list>button.studio-add-entry:hover{filter:brightness(1.08)}
 .studio-editor{background:var(--studio-panel);border-color:var(--studio-rule);box-shadow:0 16px 40px rgba(3,10,25,.1)}
