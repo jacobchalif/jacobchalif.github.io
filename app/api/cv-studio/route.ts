@@ -14,7 +14,7 @@ function token() {
 async function github(path: string, init: RequestInit = {}) {
   const secret = token();
   if (!secret) throw new Error("CV Studio publishing has not been connected to GitHub yet.");
-  const response = await fetch(`${api}${path}`, { ...init, headers: { Accept: "application/vnd.github+json", Authorization: `Bearer ${secret}`, "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json", ...init.headers } });
+  const response = await fetch(`${api}${path}`, { ...init, headers: { Accept: "application/vnd.github+json", Authorization: `Bearer ${secret}`, "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json", "User-Agent": "jacob-chalif-cv-studio", ...init.headers } });
   if (!response.ok) throw new Error(`GitHub rejected the request (${response.status}).`);
   return response.json();
 }
